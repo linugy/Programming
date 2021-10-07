@@ -6,7 +6,7 @@
 （2）指向const的指针，表示不能通过指针来修改指向变量的值，例如const int *p = &a;
 #### 修饰引用
 （1）对const的引用，表示不可以修改引用的值，例如const int &m = n;
-*有疑问*（2）没有 const 引用，因为引用本身就是 const ，引用必须进行初始化
+（2）没有 const 引用，因为引用本身就是 const ，引用必须进行初始化
 #### 修饰成员函数
 说明在该成员函数内不能修改成员变量
 
@@ -119,7 +119,7 @@ void f( Student me );       // 正确，"struct" 关键字可省略
 ```
 
 ### 9.C++ 中 struct 和 class
-唯一区别：默认访问权限，struct是public，class是private
+唯一区别：默认访问权限，struct是public，class是private。
 struct 更适合看成是一个数据结构的实现，class 更适合看成是一个对象的实现。
 
 ### 10.this
@@ -217,8 +217,15 @@ enum color {
 ### 21.内存分配和管理
 #### malloc、free
 是库函数；
-malloc申请指定字节数的内存，例如：char *str = (char*) malloc(100);
-free释放内存，例如：free(p);  p = nullptr;
+malloc申请指定字节数的内存，例如：
+```
+char *str = (char*) malloc(100);
+```
+free释放内存，例如：
+```
+free(p);  p = nullptr;
+```
+
 #### new、delete
 是C++运算符；
 new先底层调用 malloc 分配了内存，然后调用构造函数
@@ -228,8 +235,8 @@ delete先调用析构函数（清理资源），然后底层调用 free 释放�
 
 ### 22.成员初始化列表
 必须使用成员初始化列表的情况：
-（1）成员变量为const类型
-（2）成员变量为引用类型
+（1）成员变量为const类型。
+（2）成员变量为引用类型。
 const或引用只能初始化但是不能赋值。构造函数的函数体内是赋值。所以只能使用初始化列表。
 
 ### 23.面向对象
