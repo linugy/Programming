@@ -239,6 +239,7 @@ int getAge()
 }
 
 // b.c
+#include "a.h"
 int age = getAge();
 ```
 
