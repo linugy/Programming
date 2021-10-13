@@ -91,9 +91,11 @@ if (QLabel *label = qobject_cast<QLabel *>(obj)) {
 （2）可以通过一个disconnect（）调用断开所有这些连接。如果传递Qt:：UniqueConnection类型，则只有在它不是重复的情况下才会建立连接。如果已经有一个重复的，连接将失败，connect将返回false
 
 #### 信号槽连接方式：
-（1）使用函数指针：connect(sender, &QObject::destroyed, this, &MyObject::objectDestroyed);
-（2）使用lambda：connect(sender, &QObject::destroyed, [=](){ this->m_objects.remove(sender); });
-（3）使用SIGNAL和SLOT宏，此时信号的参数不能比槽的参数少，举例：
+##### （1）使用函数指针：
+connect(sender, &QObject::destroyed, this, &MyObject::objectDestroyed);
+##### （2）使用lambda：
+connect(sender, &QObject::destroyed, [=](){ this->m_objects.remove(sender); });
+##### （3）使用SIGNAL和SLOT宏，此时信号的参数不能比槽的参数少，举例：
 ```
   connect(sender, SIGNAL(destroyed(QObject*)), this, SLOT(objectDestroyed(Qbject*)));
   connect(sender, SIGNAL(destroyed(QObject*)), this, SLOT(objectDestroyed()));
@@ -608,7 +610,7 @@ int main(int argc, char *argv[])
 （2）QtConcurrent::run
 （3）QObject::moveToThread
 
-### 释放线程资源方法：
+### 6.释放线程资源方法：
 （1）官方文档（QThread定义在栈上）：
 ```
 class Controller : public QObject
