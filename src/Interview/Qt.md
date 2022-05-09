@@ -1,201 +1,18 @@
-Ò»¡¢Qt
-1.Ôª¶ÔÏóÏµÍ³£¨Ôª¶ÔÏóÏµÍ³Ìá¹©£©
-2.ÐÅºÅ²Û£¨ÐÅºÅ²ÛÁ¬½ÓµÄ3ÖÖ·½Ê½£¬µÚÎå¸ö²ÎÊý£¬ÐÅºÅ²ÛºÍÏß³ÌÒ»ÆðÊ¹ÓÃ£©
-3.¶àÏß³Ì£¨´´½¨Ïß³ÌµÄ2ÖÖ·½Ê½£¬Ïß³ÌÍ¬²½µÄ5ÖÖ·½Ê½£¬·ÀÖ¹½çÃæ¶³½áµÄ2ÖÖ·½Ê½£©
-4.ÊÂ¼þÏµÍ³£¨×Ô¶¨ÒåÊÂ¼þ´¦Àíº¯Êý3ÖÖ·½Ê½£©
-5.QSS
-6.qmake
-7.QtÏÂTCPÍ¨ÐÅ¹ý³Ì
-8.QtÏÂUDPÍ¨ÐÅ¹ý³Ì
-9.¹ú¼Ê»¯
-
-
-
-¶þ¡¢Qt
-1.QtÌá¹©ÁË¼¸ÖÖÍ¬²½·½Ê½
-2.QtÖÐ£¬ËµÒ»ÏÂ´´½¨Ïß³Ì·½Ê½
-3.ÐÅºÅ²Û»úÖÆ
-4.Éè¼ÆÄ£Ê½ÁË½â¶àÉÙ£¿Ð´¸öµ¥ÀýÄ£Ê½
-5.ÐÅºÅ²ÛÁ¬½ÓÓÐ¼¸ÖÖ·½Ê½£¿Ö±½ÓÁ¬½ÓÊÇÔõÃ´Ö´ÐÐµÄ£¿
-6.ÐÅºÅ²ÛµÚÎå¸ö²ÎÊý£º
-7. qtÖÐQObjectÀàÊÇ×öÊ²Ã´µÄ£¬ÓÐÄÄÐ©¹¦ÄÜ?
-8.https://blog.csdn.net/xpg4321/article/details/101278293
-9.
-
-Æß¡¢³ÌÐò·¢²¼
-1.³ÌÐò´ò°üËµÒ»ÏÂ¡£
-
-
-1.qtÖÐ¶¼ÓÃµ½ÁËÄÄÐ©Éè¼ÆÄ£Ê½
-
-1.Ïß³ÌºÍ½ø³Ì
-14.ÐÅºÅ²ÛµÄÊµÏÖÔ­Àí
-9.ÐÅºÅ²ÛÓÅÈ±µã
-
-### 1.Ïß³ÌºÍ½ø³Ì
-#### £¨1£©½ø³ÌÊÇ×ÊÔ´·ÖÅäµÄ¶ÀÁ¢µ¥Î»£»Ïß³ÌÊÇ×ÊÔ´µ÷¶ÈµÄ¶ÀÁ¢µ¥Î»
-#### £¨2£©Ò»¸ö½ø³ÌÓÉ¶à¸öÏß³Ì×é³É£»
-#### £¨3£©½ø³ÌÖ®¼äÇÐ»»¿ªÏú´ó£»Ïß³ÌÖ®¼äÇÐ»»µÄ¿ªÏúÐ¡
-
-### 2.Ïß³ÌÍ¬²½ºÍ»¥³â
-ÔÝÊ±Ö»¿´QtµÄÏß³ÌÍ¬²½
-
-
-
-### 9.ÐÅºÅ²ÛÓÅÈ±µã
-#### ÓÅµã£º
-£¨1£©µÍñîºÏ£º·¢ËÍ·½²»ÓÃ¹Ü½ÓÊÕ·½ÊÇË­£¬Ö»ÐèÒª·¢ËÍÐÅºÅ¼´¿É¡£Í¬Àí£¬½ÓÊÕ·½Ò²²»ÓÃÖªµÀ·¢ËÍ·½ÊÇË­£¬Ö»ÒªÐÅºÅµ½ÁË¾Í¿ÉÒÔÖ´ÐÐ²Ûº¯Êý¡£
-£¨2£©ÀàÐÍ°²È«£ºÐÅºÅµÄ²ÎÊýÀàÐÍºÍ¸öÊýÓë½ÓÊÕ·½µÄÒ»ÖÂ¡£
-#### È±µã£º
-£¨1£©Ð§ÂÊµÍ£ºÐèÒªÕÒ½ÓÊÜÐÅºÅµÄ¶ÔÏó¡£
-
-
-### 22.²å¼þ¹ÜÀíÆ÷
-https://blog.csdn.net/kenfan1647/category_9967854.html
-
-### 23.²å¼þÖ®¼äÍ¨ÐÅ
-https://blog.csdn.net/kenfan1647/category_9967854.html
-
-
-
-#### 1.ÊÂ¼þÑ­»·
-QtµÄÖ÷ÊÂ¼þÑ­»·ÄÜ¹»´ÓÊÂ¼þ¶ÓÁÐÖÐ»ñÈ¡±¾µØ´°¿ÚÏµÍ³ÊÂ¼þ£¬È»ºóÅÐ¶ÏÊÂ¼þÀàÐÍ£¬²¢½«ÊÂ¼þ·Ö·¢¸øÌØ¶¨µÄ½ÓÊÕ¶ÔÏó¡£
-Ö÷ÊÂ¼þÑ­»·Í¨¹ýµ÷ÓÃQCoreApplication::exec()Æô¶¯£¬Ëæ×ÅQCoreApplication::exit()½áÊø£¬±¾µØµÄÊÂ¼þÑ­»·¿ÉÓÃÀûÓÃQEventLoop¹¹½¨¡£
-
-#### 2.¶àÏß³Ì
-µÚÒ»ÖÖ·½·¨:
-
-´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú
-ÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, ½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ
-ÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
-µÚ¶þÖÖ·½·¨:
-½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý
-ÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó
-ÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó
-½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ
-ÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì
-Í¨¹ýÐÅºÅ²ÛµÄ·½Ê½, Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
-¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî:
-ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó
-×ÓÏß³ÌÖÐ²»ÄÜ´¦Àíui´°¿Ú(uiÏà¹ØµÄÀà)
-×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°´°¿Ú
-
-#### 3.¶àÏß³ÌÍ¬²½
-1.ÁÙ½çÇø±»³õÊ¼»¯ºó£¬µ±³ÌÐò½øÈëÁÙ½çÇøºó±ãÓµÓÐÁÙ½çÇøµÄËùÓÐÈ¨£¬ÆäÓàÏß³ÌÎÞÈ¨½øÈëÖ»ÄÜµÈ¶Ô·½ÊÍ·ÅÁÙ½çÇøÖ®ºó£¬·½¿É½øÈëÁÙ½çÇøÓµÓÐÆäËùÓÐÈ¨ÔÙ¶ÔÁÙ½çÇø½øÐÐ²Ù×÷ÁÙ½çÇøÎªÒÀ´Î·ÃÎÊ£¬²»ÄÜÊµÏÖÆäÖÐÒ»¸öÏß³ÌÒ»ÊÍ·ÅÁÙ½çÇø¾Í»á±»ÁíÒ»¸öÏß³Ì·ÃÎÊÁÙ½çÇø£¡²»ÄÜÊµÏÖÊµÊ±¼àÌý;
-2.ÊÂ¼þ¶ÔÏóÊÇÖ¸ÓÃ»§ÔÚ³ÌÐòÖÐÊ¹ÓÃÄÚºË¶ÔÏóµÄÓÐÎÞÐÅºÅ×´Ì¬ÊµÏÖÏß³ÌµÄÍ¬²½ÁÙ½çÇø±»³õÊ¼»¯ºóÒ»µ©ÊÂ¼þ¶ÔÏó±»ÉèÖÃÎªÓÐÐÅºÅ Á¢¿Ì»á±»ÆäÓàÏß³Ì·ÃÎÊ£¡ÄÜÊµÏÖÊµÊ±¼àÌý
-3.»¥³â¶ÔÏó»¹¿ÉÒÔÔÚ½ø³Ì¼äÊ¹ÓÃ£¬ÔÚÊµÏÖÏß³ÌÍ¬²½Ê±°üº¬Ò»¸öÏß³ÌIDºÍÒ»¸ö¼ÆÊýÆ÷£¬
-Ïß³ÌID±íÊ¾ÓµÓÐ»¥³â¶ÔÏóµÄÏß³Ì£¬¼ÆÊýÆ÷±íÊ¾¸Ã»¥³â¶ÔÏó±»Í¬Ò»Ïß³ÌËùÊ¹ÓÃ´ÎÊý
-Ò»µ©»¥³â¶ÔÏó±»ÊÍ·Å Á¢¿Ì»á±»ÆäËüÕýÔÚµÈ´ýµÄÏß³Ì·ÃÎÊ£¡ÄÜÊµÏÖÊµÊ±¼àÌý;
-
-#### 4.Ê²Ã´ÊÇÖÇÄÜÖ¸Õë£¿ÓÐ¼¸ÖÖ?·Ö±ðÊÇÊ²Ã´£¿
-´ð:Ò»°ãÊÇÖ¸°ÑÖ¸Õë·â×°µ½Ò»¸öÀàÖÐ,Õâ¸öÀàÖÐ»¹·â×°ÁËÒ»¸ö¼ÆÊýÆ÷,
-¶ÔÖ¸ÕëµÄ¸´ÖÆµÈ²Ù×÷½«µ¼ÖÂ¸Ã¼ÆÊýÆ÷¼Ó1,¶ÔÖ¸Õëdelete»á¼õ1,Ö±µ½Îª0,
-Ö¸ÕëÎªNULL¡£
-ÖÇÄÜÖ¸ÕëÓÐ:
-shared_ptr¡¢weak_ptr¡¢unique_ptrºÍauto_ptr(c++11ÞðÆú);
-·Ö±ðÓÐ£º
-1.auto_ptr¶¨Ò»¶ÔÏó¿ÉÒÔ½«newµ½µÄµØÖ·¸³¸øÕâÒ»¶ÔÏó,µ±ÖÇÄÜÖ¸Õë¹ýÆÚÊ±
-Îö¹¹º¯Êý»áµ÷ÓÃdeleteº¯Êý,¶ÔÏó±»Ïú»Ù,ÓÉ´ËÄÚ´æ¿ÉÒÔ×Ô¶¯±»ÊÍ·Å;
-2.shared_ptrÔÊÐí¶à¸öÖ¸ÕëÖ¸ÏòÍ¬Ò»¸ö¶ÔÏó,Ã¿¶àÒ»¸öÖ¸ÕëÖ¸Ïò£¬
-¼ÆÊý¾Í»á¼Ó1,ÊÍ·ÅµÄÊ±ºò,µ±Öµ¼õÎª0¼´×îºóÒ»¸öÖ¸Õë¹ýÆÚ²Å»ádeleteº¯Êý11
-3.unique_ptrÎ¨Ò»µÄ£¬Ö»ÄÜÒ»¸öÖ¸ÕëÖ¸ÏòÒ»¸ö¶ÔÏó¡£
-4.weak_ptrÎªÅäºÏshared_ptr¶øÒýÈëµÄÓÃÓÚÐ­Öúshared_ptr¹¤×÷.
-
-#### 5.qtÐÅºÅ²ÛÊÇÊ²Ã´£¿
-´ð:ÐÅºÅ²ÛÊµ¼Ê¾ÍÊÇ¹Û²ìÕßÄ£Ê½,µ±Ä³¸öÊÂ¼þ·¢ÉúÖ®ºó,Ëü¾Í»á·¢³öÒ»¸öÐÅºÅ(signal),
-Õâ¸öÐÅºÅÀàËÆ¹ã²¥, ÏëÒª´¦ÀíµÄÐÅºÅºÍ×Ô¼ºµÄÒ»¸öº¯Êý(²Ûº¯Êý(slot))°ó¶¨´¦ÀíÕâ¸öÐÅºÅ
-µ±ÐÅºÅ·¢³öÊ±,±»Á´½ÓµÄ²Ûº¯Êý»á×Ô¶¯±»»Øµ÷;
-ÐÅºÅºÍ²ÛÊÇqtÌØÓÐµÄÐÅÏ¢´«»Ø»úÖÆ,ÊÇQTÉè¼Æ³ÌÐòµÄÖØÒª»ù´¡,Ëü¿ÉÒÔÈÃ»¥²»Ïà¸ÉÈÅµÄ¶ÔÏó½¨Á¢Ò»ÖÖÁªÏµ;
-²Û±¾ÖÊÊÇÀàµÄ³ÉÔ±º¯Êý,Æä²ÎÊý¿ÉÒÔÊÇÈÎÒâÀàÐÍ¡£
-ºÍº¯ÊýÎ¨Ò»Çø±ðÊÇ£º²Û¿ÉÒÔÓëÐÅºÅÁ¬½ÓÔÚÒ»Æð,Ã¿µ±ºÍ²ÛÁ¬½ÓµÄÐÅºÅ±»·¢ÉäµÄÊ±ºò,¾Í»áµ÷ÓÃÕâ¸ö²Û¡£
-ÓÅÈ±µã£º
-a QTÐÅºÅ²Û»úÖÆµÄÒýÓÃ¾«¼òÁË³ÌÐòÔ±µÄ´úÂëÁ¿;
-b QTµÄÐÅºÅ¿ÉÒÔ¶ÔÓ¦¶à¸ö²Û£¨µ«ËûÃÇµÄµ÷ÓÃË³ÐòÊÇËæ»ú£©£¬Ò²¿ÉÒÔ¶à¸ö²ÛÓ³ÉäÒ»¸öÐÅºÅ;
-c QTµÄÐÅºÅ²ÛµÄ½¨Á¢ºÍ½â³ý°ó¶¨Ê®·Ö×ÔÓÉ;
-dÐÅºÅ²ÛÍ¬ÕæÕýµÄ»Øµ÷º¯Êý±ÈÆðÀ´Ê±¼äµÄºÄËð»¹ÊÇºÜ´óµÄ£¬ËùÓÐÔÚÇ¶ÈëÊ½ÊµÊ±ÏµÍ³ÖÐÓ¦µ±É÷ÓÃ;
-eÐÅºÅ²ÛµÄ²ÎÊýÏÞ¶¨ºÜ¶àÀýÈç²»ÄÜÐ¯´øÄ£°åÀà²ÎÊý£¬²»ÄÜ³öÏÖºê¶¨ÒåµÈµÈ;
-
-#### 6.ÐÅºÅ²ÛµÄËÄÖÖÐ´·¨ºÍÎåÖÖÁ¬½Ó·½Ê½£¿
-connect(ÐÅºÅ·¢³öÕß£¬ÐÅºÅ£¬ÐÅºÅ½ÓÊÕÕß£¬²Û£¬Á¬½Ó·½Ê½(Òþ²ØÄ¬ÈÏ×Ô¶¯Á¬½Ó))//Îå¸ö²ÎÊý
-ËÄÖÖÐ´·¨£º
-1.ÓÃºê£º
-connect(this,SIGNAL(clicked()),this,SLOT(colse())); //Á¬½Ó·½Ê½(Òþ²ØÄ¬ÈÏ×Ô¶¯Á¬½Ó))
-2.ÓÃº¯ÊýÖ¸Õë£º connect(this,&mainwindow::my_signal,this,&mainwindow::my_slot);
-3.ÓÃÖØÔØº¯ÊýÖ¸ÕëQoverload
-connect(this,Qoverload<²ÎÊý>::of(&mainwindow::my_signal),this,Qoverload<²ÎÊý>::of(&mainwindow::my_slot));
-4.lambda±í´ïÊ½(ÄäÃûº¯Êý) ÄäÃûº¯Êý´úÌæ²Û
-connect(this,&mainwindow::my_signal,this,[=]{qDebug()<<100;});
-Á¬½Ó·½Ê½£º×Ô¶¯Á¬½Ó(Ä¬ÈÏÁ¬½Ó·½Ê½)
-Ö±½ÓÁ¬½Ó(ÓÃÓÚµ¥Ïß³Ì,×Ô¶¯Æ¥Åä)
-¶ÓÁÐ(ÓÃÓÚ¶àÏß³ÌÒ²¿ÉÓÃÓÚµ¥Ïß³Ì,×Ô¶¯Æ¥Åä)
-×èÈû¶ÓÁÐ(¿çÏß³Ì,¶àÏß³Ì)
-Î¨Ò»Á¬½Ó(¿çÏß³Ì,¶àÏß³Ì)
-
-#### 7.Lambda±í´ïÊ½
-´ð£ºlambda±í´ïÊ½Ö÷Òª·ÖÎå²¿·Ö:[º¯Êý¶ÔÏó²ÎÊý]¡¢(²Ù×÷·ûÖØÔØº¯Êý²ÎÊý)¡¢mutable»ò ÉùÃ÷¡¢->·µ»ØÖµÀàÐÍ¡¢{º¯ÊýÌå} [²¶»ñÁÐ±í] (²ÎÊýÁÐ±í) º¯ÊýÑ¡Ïî -> ·µ»ØÖµÀàÐÍ {º¯ÊýÌå}
-[&]:ÒÔÒýÓÃµÄ·½Ê½²¶»ñÍâ²¿µÄËùÓÐ±äÁ¿£¬Èç¹ûÔÚº¯ÊýÌåÄÚ¸Ä±äÍâ²¿±äÁ¿Öµ£¬Íâ²¿±äÁ¿Öµ¾Í»áËæÖ®¸Ä±ä£»
-¡¡¡¡[=]:ÒÔÖµµÄ·½Ê½²¶»ñÍâ²¿µÄËùÓÐ±äÁ¿£¬Èç¹ûÔÚº¯ÊýÌåÄÚ¸Ä±ä¡°Íâ²¿±äÁ¿Öµ¡±£¬Íâ²¿±äÁ¿Öµ²»»á¸Ä±ä£»
-
-#### 8.q¡¢dÖ¸Õë¸ÉÊ²Ã´ÓÃµÄ£¿ÎªÁË½â¾öÊ²Ã´ÎÊÌâ£¿
-´ð£ºq×ÓÀà»ñÈ¡¸¸ÀàË½ÓÐ³ÉÔ±Ö¸Õë
-dÔÚ¸¸Àà»ñÈ¡×ÓÀàË½ÓÐ³ÉÔ±Ö¸Õë
-Îª½â¾ö¶þ½øÖÆ¼æÈÝ
-ËùÎ½¶þ½øÖÆ¼æÈÝ¶¯Ì¬¿â£¬Ö¸µÄÊÇÒ»¸öÔÚÀÏ°æ±¾¿âÏÂÔËÐÐµÄ³ÌÐò£¬ÔÚ²»¾­¹ý±àÒëµÄÇé¿öÏÂ£¬ÈÔÈ»ÄÜ¹»ÔÚÐÂµÄ°æ±¾¿âÏÂÔËÐÐ£»
-ÐèÒª¾­¹ý±àÒë²ÅÄÜÔÚÐÂ°æ±¾ÏÂÔËÐÐ£¬¶ø²»ÐèÒªÐÞ¸Ä¸Ã³ÌÐòÔ´´úÂë£¬ÎÒÃÇ¾ÍËµ¸Ã¶¯Ì¬¿âÊÇÔ´´úÂë¼æÈÝµÄ;
-
-#### 9.qtÄ£ÐÍ
-´ð£ºQtÖÐµÄViewÖ÷ÒªÓÐÈýÖÖQListView£¬QTreeView, QTabelView
-¶ø¶ÔÓ¦µÄModelÊÇ£ºQStringListModel, QAbstractItemModel , QStandardItemModel¡£
-³éÏó ±ê×¼
-
-
-
-#### ÎÊ£º¶ÔQtÔª¶ÔÏóÏµÍ³ÁË½â°É£¿
-        
-´ð£ºÁË½â¡£Qt¶Ô±ê×¼µÄC++½øÐÐÁËÀ©Õ¹£¬ÈçÐÅºÅ²Û¡¢¶ÔÏóÊôÐÔµÈ¡£QtµÄÔª¶ÔÏó±àÒëÏµÍ³MOCÊÇÒ»¸öÔ¤´¦ÀíÆ÷£¬
-µ±Qt¶ÁÈ¡Ô´ÎÄ¼þÊ±¼ì²âµ½ÀàÖÐ°üº¬ÓÐQ_OBJECTºêÊ±£¬Ôò»á´´½¨Ò»¸öÐÂµÄÎÄ¼þ£¨Éú³ÉÂ·¾¶ÏÂµÄmoc¿ªÍ·µÄÎÄ¼þ£©£¬
-½«Ô´Âë×ª»»ÎªC++±àÒëÆ÷¿ÉÒÔÊ¶±ðµÄ´úÂëÐ´Èëmoc¿ªÍ·µÄÎÄ¼þ£¬È»ºóC++±àÒëÆ÷¶ÔÆä½øÐÐ±àÒë¡£µ±ÄãµÄÀàÐèÒªÊ¹ÓÃQtµÄÀ©Õ¹¹¦ÄÜÊ±£¬
-ÈçÐÅºÅ²Û¡¢¶ÔÏóÊôÐÔµÈÊ±£¬Ôò±ØÐëÊ¹ÓÃMOC£¬·´Ö®Èç¹ûÄãµÄÀà²»Ê¹ÓÃÕâÐ©¹¦ÄÜµÄÊ±ºò²»ÒªÎÞÎ·µÄÊ¹ÓÃMOCÔö´óÔ´ÂëÌå»ý¡£
-Ê¹ÓÃMOCÏµÍ³µÄ·½·¨£º
-
-        1. ¼Ì³ÐQObject¡£
-
-        2. ÀàÖÐÌí¼ÓQ_OBJECTºê¡£
-
-#### ÎÊ£º¶ÔQtµÄÐÅºÅ²Û»úÖÆÁË½â°É£¿
-        
-´ð£ºÁË½â¡£ÐÅºÅºÍ²ÛÊÇÓÃÓÚ¶ÔÏóÖ®¼äµÄÍ¨ÐÅµÄ£¬ÊÇQtµÄºËÐÄ¡£
-Îª´ËQtÒýÈëÁËÒ»Ð©¹Ø¼ü×Ö£¬ËûÃÇÊÇslots¡¢signals¡¢emit£¬ÕâÐ©¶¼²»ÊÇC++¹Ø¼ü×Ö£¬ÊÇQtÌØÓÐµÄ£¬
-ÕâÐ©¹Ø¼ü×Ö»á±»QtµÄmoc×ª»»Îª±ê×¼µÄC++Óï¾ä¡£ÐÅºÅ²ÛÖ§³ÖÏß³Ì¼äÍ¨ÐÅ£¬connectº¯ÊýµÄµÚÎå¸ö²ÎÊý¿ÉÒÔÖ¸¶¨ÐÅºÅ²ÛµÄÁ¬½Ó·½Ê½£º
+#### 1.¶àÏß³ÌÊ¹ÓÃ·½·¨
+·½·¨Ò»£º¢Ù´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú¢ÚÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, 
+½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ ¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
 
         
-1. Qt::AutoConnection£ºÐÅºÅµÄ·¢ËÍÕßÓëÐÅºÅµÄ½ÓÊÕÕßÔÚÍ¬Ò»Ïß³Ì£¬ÔòÄ¬ÈÏÊ¹ÓÃQt::DirectConnection£»Èç¹û²»ÔÚÍ¬Ò»Ïß³Ì£¬ÔòÄ¬ÈÏ  Ê¹ÓÃQt::QueuedConnection¡£
-       
- 2. Qt::DirectConnection£ºÐÅºÅµÄ·¢ËÍÕßÓëÐÅºÅµÄ½ÓÊÕÕßÔÚÍ¬Ò»Ïß³ÌÖÐÖ´ÐÐ£¬µ±·¢³öÐÅºÅºó£¬»áÂíÉÏ½øÈë²Ûº¯Êý£¬¿´ÉÏÈ¥¾ÍÏñÔÚÐÅºÅ  
-·¢ËÍÎ»ÖÃµ÷ÓÃÁË²Ûº¯Êý£¬ÔÚ¶àÏß³ÌÏÂ»á±È½ÏÎ£ÏÕ£¬ÈÝÒ×Ôì³É±ÀÀ£¡£
-       
- 3. Qt::QueuedConnection£ºÐÅºÅµÄ·¢ËÍÕßÓëÐÅºÅµÄ½ÓÊÕÕß²»ÔÚÍ¬Ò»Ïß³ÌÖÐÖ´ÐÐ£¬
-²Ûº¯ÊýÔËÐÐÓÚÐÅºÅµÄ½ÓÊÕÕßÏß³Ì£¬µ±·¢ËÍÐÅºÅºó£¬  ²Ûº¯Êý²»»áÂíÉÏ±»µ÷ÓÃ£¬µÈ´ýÐÅºÅµÄ½ÓÊÕÕß°Ñµ±Ç°º¯ÊýÖ´ÐÐÍê£¬½øÈëÊÂ¼þÑ­»·Ö®ºó£¬²Ûº¯Êý²Å»á±»µ÷ÓÃ¡£
-¶àÏß³Ì»·¾³ÏÂÒ»°ãÓÃÕâ¸ö¡£
-        4. Qt::BlockingQueuedConnection£º²Ûº¯ÊýµÄµ÷ÓÃÊ±»úÓëQt::QueuedConnectionÒ»ÖÂ£¬
-²»¹ý·¢ËÍÍêÐÅºÅºó·¢ËÍÕßËùÔÚÏß³Ì»á×èÈû£¬Ö±µ½²Ûº¯ÊýÔËÐÐÍê¡£½ÓÊÕÕßºÍ·¢ËÍÕß¾ø¶Ô²»ÄÜÔÚÒ»¸öÏß³Ì£¬·ñÔò³ÌÐò»áËÀËø¡£ÔÚ¶àÏß³Ì¼äÐèÒªÍ¬²½µÄ³¡ºÏ¿ÉÄÜÐèÒªÕâ¸ö¡£
-        
-5. Qt::UniqueConnection£º¿ÉÒÔÍ¨¹ý°´Î»»ò£¨|£©ÓëÒÔÉÏËÄ¸ö½áºÏÔÚÒ»ÆðÊ¹ÓÃ¡£µ±ÉèÖÃ´Ë²ÎÊýÊ±£¬µ±Ä³¸öÐÅºÅºÍ²ÛÒÑ¾­Á¬½ÓÊ±£¬ÔÙ½øÐÐÖØ¸´µÄÁ¬½Ó¾Í»áÊ§°Ü£¬
-Ò²¾ÍÊÇ±ÜÃâÁËÖØ¸´Á¬½Ó¡£
+·½·¨¶þ£º¢Ù½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý¢ÚÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó 
+¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó ¢Ü½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ ¢ÝÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì ¢ÞÍ¨¹ýÐÅºÅ²ÛµÄ·½Ê½, 
+Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
 
+¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî: 
+* 1. ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó 
+* 2. ×ÓÏß³ÌÖÐ²»ÄÜ´¦Àíui´°¿Ú(uiÏà¹ØµÄÀà) 
+* 
+3. ×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°´°¿Ú
 
-#### ÎÊ£ºQtÖÐµÄMVDÁË½â°É£¿
-        
-´ð£ºÁË½â¡£QtµÄMVD°üº¬Èý¸ö²¿·ÖModel£¨Ä£ÐÍ£©£¬View£¨ÊÓÍ¼£©£¬´úÀí£¨Delegate£©¡£
-Model·ñÔò±£´æÊý¾Ý£¬View¸ºÔðÕ¹Ê¾Êý¾Ý£¬Delegate¸ºÔðItemÑùÊ½»æÖÆ»ò´¦ÀíÊäÈë¡£
-ÕâÈý²¿·ÖÍ¨¹ýÐÅºÅ²ÛÀ´½øÐÐÍ¨ÐÅ£¬µ±ModelÖÐÊý¾Ý·¢Éú±ä»¯Ê±½«»á·¢ËÍÐÅºÅµ½View£¬ÔÚViewÖÐ±à¼­Êý¾ÝÊ±£¬
-Delegate¸ºÔð½«±à¼­×´Ì¬·¢ËÍ¸øModel²ã¡£»ùÀà·Ö±ðÎªQAbstractItemModel¡¢QAbstractItemView¡¢QAbstractItemDelegate¡£
-QtÖÐÌá¹©ÁËÄ¬ÈÏÊµÏÖµÄMVDÀà£¬ÈçQTableWidget¡¢QListWidget¡¢QTreeWidgetµÈ¡£
-
-#### ÎÊ£º¶ÔQGraphicsViewÁË½â°É£¿
-
-#### ÎÊ£º¶ÔQtµÄ¶àÏß³ÌÁË½â°É£¿
-        
 ´ð£ºÁË½â¡£QtµÄ¶àÏß³ÌµÄÊµÏÖ·½Ê½ÓÐÈçÏÂËÄÖÖ£º
 
         
@@ -231,13 +48,41 @@ QtÖÐÌá¹©ÁËÄ¬ÈÏÊµÏÖµÄMVDÀà£¬ÈçQTableWidget¡¢QListWidget¡¢QTreeWidgetµÈ¡£
         
 È±µã£ºÃ»É¶È±µã¡£
 
-#### ÎÊ£º¶ÔQtµÄÊÂ¼þ´«µÝÁË½â°É£¿
-https://www.cnblogs.com/xiaobingqianrui/p/9547924.html
+µÚÒ»ÖÖ·½·¨:
+´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú
+ÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, ½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ
+ÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
+µÚ¶þÖÖ·½·¨:
+½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý
+ÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó
+ÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó
+½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ
+ÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì
+Í¨¹ýÐÅºÅ²ÛµÄ·½Ê½, Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
+¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî:
+ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó
+×ÓÏß³ÌÖÐ²»ÄÜ´¦Àíui´°¿Ú(uiÏà¹ØµÄÀà)
+×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°´°¿Ú
 
+#### 2.QtÐÅºÅºÍ²ÛµÄ±¾ÖÊÊÇÊ²Ã´ 
+»Øµ÷º¯Êý¡£ÐÅºÅ»òÊÇ´«µÝÖµ£¬»òÊÇ´«µÝ¶¯×÷±ä»¯£»²Ûº¯ÊýÏìÓ¦ÐÅºÅ»òÊÇ½ÓÊÕÖµ£¬»òÕß¸ù¾Ý¶¯×÷±ä»¯À´×ö³ö¶ÔÓ¦²Ù×÷¡£
 
+#### 2.qtÐÅºÅ²ÛÊÇÊ²Ã´£¿
+´ð:ÐÅºÅ²ÛÊµ¼Ê¾ÍÊÇ¹Û²ìÕßÄ£Ê½,µ±Ä³¸öÊÂ¼þ·¢ÉúÖ®ºó,Ëü¾Í»á·¢³öÒ»¸öÐÅºÅ(signal),
+Õâ¸öÐÅºÅÀàËÆ¹ã²¥, ÏëÒª´¦ÀíµÄÐÅºÅºÍ×Ô¼ºµÄÒ»¸öº¯Êý(²Ûº¯Êý(slot))°ó¶¨´¦ÀíÕâ¸öÐÅºÅ
+µ±ÐÅºÅ·¢³öÊ±,±»Á´½ÓµÄ²Ûº¯Êý»á×Ô¶¯±»»Øµ÷;
+ÐÅºÅºÍ²ÛÊÇqtÌØÓÐµÄÐÅÏ¢´«»Ø»úÖÆ,ÊÇQTÉè¼Æ³ÌÐòµÄÖØÒª»ù´¡,Ëü¿ÉÒÔÈÃ»¥²»Ïà¸ÉÈÅµÄ¶ÔÏó½¨Á¢Ò»ÖÖÁªÏµ;
+²Û±¾ÖÊÊÇÀàµÄ³ÉÔ±º¯Êý,Æä²ÎÊý¿ÉÒÔÊÇÈÎÒâÀàÐÍ¡£
+ºÍº¯ÊýÎ¨Ò»Çø±ðÊÇ£º²Û¿ÉÒÔÓëÐÅºÅÁ¬½ÓÔÚÒ»Æð,Ã¿µ±ºÍ²ÛÁ¬½ÓµÄÐÅºÅ±»·¢ÉäµÄÊ±ºò,¾Í»áµ÷ÓÃÕâ¸ö²Û¡£
+ÓÅÈ±µã£º
+a QTÐÅºÅ²Û»úÖÆµÄÒýÓÃ¾«¼òÁË³ÌÐòÔ±µÄ´úÂëÁ¿;
+b QTµÄÐÅºÅ¿ÉÒÔ¶ÔÓ¦¶à¸ö²Û£¨µ«ËûÃÇµÄµ÷ÓÃË³ÐòÊÇËæ»ú£©£¬Ò²¿ÉÒÔ¶à¸ö²ÛÓ³ÉäÒ»¸öÐÅºÅ;
+c QTµÄÐÅºÅ²ÛµÄ½¨Á¢ºÍ½â³ý°ó¶¨Ê®·Ö×ÔÓÉ;
+dÐÅºÅ²ÛÍ¬ÕæÕýµÄ»Øµ÷º¯Êý±ÈÆðÀ´Ê±¼äµÄºÄËð»¹ÊÇºÜ´óµÄ£¬ËùÓÐÔÚÇ¶ÈëÊ½ÊµÊ±ÏµÍ³ÖÐÓ¦µ±É÷ÓÃ;
+eÐÅºÅ²ÛµÄ²ÎÊýÏÞ¶¨ºÜ¶àÀýÈç²»ÄÜÐ¯´øÄ£°åÀà²ÎÊý£¬²»ÄÜ³öÏÖºê¶¨ÒåµÈµÈ;
 
-#### Ò»¡¢½²ÊöQtÐÅºÅ²Û»úÖÆÓëÓÅÊÆÓë²»×ã
-ÓÅµã£º 
+#### 3.½²ÊöQtÐÅºÅ²Û»úÖÆÓëÓÅÊÆÓë²»×ã
+ÓÅµã£º
 ¢ÙÀàÐÍ°²È«¡£ÐèÒª¹ØÁªµÄÐÅºÅ²ÛµÄÇ©Ãû±ØÐëÊÇµÈÍ¬µÄ¡£
 ¼´ÐÅºÅµÄ²ÎÊýÀàÐÍºÍ²ÎÊý¸öÊýÍ¬½ÓÊÜ¸ÃÐÅºÅµÄ²ÛµÄ²ÎÊýÀàÐÍºÍ²ÎÊý¸öÊýÏàÍ¬¡£ÈôÐÅºÅºÍ²ÛÇ©Ãû²»Ò»ÖÂ£¬±àÒëÆ÷»á±¨´í¡£
 
@@ -249,6 +94,7 @@ Qt¾Í±£Ö¤ÁËÊÊµ±µÄ²ÛµÃµ½ÁËµ÷ÓÃ£¬¼´Ê¹¹ØÁªµÄ¶ÔÏóÔÚÔËÐÐÊ±±»É¾³ý¡£³ÌÐòÒ²²»»á±¼À£¡£
          
 ¢ÛÁé»îÐÔ¡£Ò»¸öÐÅºÅ¿ÉÒÔ¹ØÁª¶à¸ö²Û£¬»ò¶à¸öÐÅºÅ¹ØÁªÍ¬Ò»¸ö²Û¡£
 
+
 ²»×ã£ºËÙ¶È½ÏÂý¡£Óë»Øµ÷º¯ÊýÏà±È£¬ÐÅºÅºÍ²Û»úÖÆÔËÐÐËÙ¶È±ÈÖ±½Óµ÷ÓÃ·ÇÐéº¯ÊýÂý10±¶¡£
 
        
@@ -256,21 +102,93 @@ Qt¾Í±£Ö¤ÁËÊÊµ±µÄ²ÛµÃµ½ÁËµ÷ÓÃ£¬¼´Ê¹¹ØÁªµÄ¶ÔÏóÔÚÔËÐÐÊ±±»É¾³ý¡£³ÌÐòÒ²²»»á±¼À£¡£
 £¨È»¶ø£¬Óë´´½¨¶ÔÏóµÄnew²Ù×÷¼°É¾³ý¶ÔÏóµÄdelete²Ù×÷Ïà±È£¬ÐÅºÅºÍ²ÛµÄÔËÐÐ´ú¼ÛÖ»ÊÇËûÃÇºÜÉÙµÄÒ»²¿·Ö¡£
 ÐÅºÅºÍ²Û»úÖÆµ¼ÖÂµÄÕâµãÐÔÄÜËðºÄ£¬¶ÔÊµÊ±Ó¦ÓÃ³ÌÐòÊÇ¿ÉÒÔºöÂÔµÄ¡££©
 
-#### ¶þ¡¢QtÐÅºÅºÍ²ÛµÄ±¾ÖÊÊÇÊ²Ã´ 
-        »Øµ÷º¯Êý¡£ÐÅºÅ»òÊÇ´«µÝÖµ£¬»òÊÇ´«µÝ¶¯×÷±ä»¯£»²Ûº¯ÊýÏìÓ¦ÐÅºÅ»òÊÇ½ÓÊÕÖµ£¬»òÕß¸ù¾Ý¶¯×÷±ä»¯À´×ö³ö¶ÔÓ¦²Ù×÷¡£
+#### 3.ÐÅºÅ²ÛÓÅÈ±µã
+ÓÅµã£º
+£¨1£©µÍñîºÏ£º·¢ËÍ·½²»ÓÃ¹Ü½ÓÊÕ·½ÊÇË­£¬Ö»ÐèÒª·¢ËÍÐÅºÅ¼´¿É¡£Í¬Àí£¬½ÓÊÕ·½Ò²²»ÓÃÖªµÀ·¢ËÍ·½ÊÇË­£¬Ö»ÒªÐÅºÅµ½ÁË¾Í¿ÉÒÔÖ´ÐÐ²Ûº¯Êý¡£
+£¨2£©ÀàÐÍ°²È«£ºÐÅºÅµÄ²ÎÊýÀàÐÍºÍ¸öÊýÓë½ÓÊÕ·½µÄÒ»ÖÂ¡£
+È±µã£º
+£¨1£©Ð§ÂÊµÍ£ºÐèÒªÕÒ½ÓÊÜÐÅºÅµÄ¶ÔÏó¡£
 
-#### Èý¡¢ÃèÊöQTÖÐµÄÎÄ¼þÁ÷(QTextStream)ºÍÊý¾ÝÁ÷(QDataStream)µÄÇø±ð
-       
-ÎÄ¼þÁ÷(QTextStream)¡£²Ù×÷ÇáÁ¿¼¶Êý¾Ý£¨int,double,QString£©Êý¾ÝÐ´ÈëÎÄ±¾¼þÖÐÒÔºóÒÔÎÄ±¾µÄ·½Ê½³ÊÏÖ¡£
-
-       
-Êý¾ÝÁ÷(QDataStream)¡£Í¨¹ýÊý¾ÝÁ÷¿ÉÒÔ²Ù×÷¸÷ÖÖÊý¾ÝÀàÐÍ£¬°üÀ¨¶ÔÏó£¬´æ´¢µ½ÎÄ¼þÖÐÊý¾ÝÎª¶þ½øÖÆ¡£
+#### 4.ÎÊ£º¶ÔQtµÄÐÅºÅ²Û»úÖÆÁË½â°É£¿
+        
+´ð£ºÁË½â¡£ÐÅºÅºÍ²ÛÊÇÓÃÓÚ¶ÔÏóÖ®¼äµÄÍ¨ÐÅµÄ£¬ÊÇQtµÄºËÐÄ¡£
+Îª´ËQtÒýÈëÁËÒ»Ð©¹Ø¼ü×Ö£¬ËûÃÇÊÇslots¡¢signals¡¢emit£¬ÕâÐ©¶¼²»ÊÇC++¹Ø¼ü×Ö£¬ÊÇQtÌØÓÐµÄ£¬
+ÕâÐ©¹Ø¼ü×Ö»á±»QtµÄmoc×ª»»Îª±ê×¼µÄC++Óï¾ä¡£ÐÅºÅ²ÛÖ§³ÖÏß³Ì¼äÍ¨ÐÅ£¬connectº¯ÊýµÄµÚÎå¸ö²ÎÊý¿ÉÒÔÖ¸¶¨ÐÅºÅ²ÛµÄÁ¬½Ó·½Ê½£º
 
         
-ÎÄ¼þÁ÷£¬Êý¾ÝÁ÷¶¼¿ÉÒÔ²Ù×÷´ÅÅÌÎÄ¼þ£¬Ò²¿ÉÒÔ²Ù×÷ÄÚ´æÊý¾Ý¡£Í¨¹ýÁ÷¶ÔÏó¿ÉÒÔ½«¶ÔÏó´ò°üµ½ÄÚ´æ£¬½øÐÐÊý¾ÝµÄ´«Êä¡£
+1. Qt::AutoConnection£ºÐÅºÅµÄ·¢ËÍÕßÓëÐÅºÅµÄ½ÓÊÕÕßÔÚÍ¬Ò»Ïß³Ì£¬ÔòÄ¬ÈÏÊ¹ÓÃQt::DirectConnection£»Èç¹û²»ÔÚÍ¬Ò»Ïß³Ì£¬ÔòÄ¬ÈÏ  Ê¹ÓÃQt::QueuedConnection¡£
+       
+ 2. Qt::DirectConnection£ºÐÅºÅµÄ·¢ËÍÕßÓëÐÅºÅµÄ½ÓÊÕÕßÔÚÍ¬Ò»Ïß³ÌÖÐÖ´ÐÐ£¬µ±·¢³öÐÅºÅºó£¬»áÂíÉÏ½øÈë²Ûº¯Êý£¬¿´ÉÏÈ¥¾ÍÏñÔÚÐÅºÅ  
+·¢ËÍÎ»ÖÃµ÷ÓÃÁË²Ûº¯Êý£¬ÔÚ¶àÏß³ÌÏÂ»á±È½ÏÎ£ÏÕ£¬ÈÝÒ×Ôì³É±ÀÀ£¡£
+       
+ 3. Qt::QueuedConnection£ºÐÅºÅµÄ·¢ËÍÕßÓëÐÅºÅµÄ½ÓÊÕÕß²»ÔÚÍ¬Ò»Ïß³ÌÖÐÖ´ÐÐ£¬
+²Ûº¯ÊýÔËÐÐÓÚÐÅºÅµÄ½ÓÊÕÕßÏß³Ì£¬µ±·¢ËÍÐÅºÅºó£¬  ²Ûº¯Êý²»»áÂíÉÏ±»µ÷ÓÃ£¬µÈ´ýÐÅºÅµÄ½ÓÊÕÕß°Ñµ±Ç°º¯ÊýÖ´ÐÐÍê£¬½øÈëÊÂ¼þÑ­»·Ö®ºó£¬²Ûº¯Êý²Å»á±»µ÷ÓÃ¡£
+¶àÏß³Ì»·¾³ÏÂÒ»°ãÓÃÕâ¸ö¡£
+        4. Qt::BlockingQueuedConnection£º²Ûº¯ÊýµÄµ÷ÓÃÊ±»úÓëQt::QueuedConnectionÒ»ÖÂ£¬
+²»¹ý·¢ËÍÍêÐÅºÅºó·¢ËÍÕßËùÔÚÏß³Ì»á×èÈû£¬Ö±µ½²Ûº¯ÊýÔËÐÐÍê¡£½ÓÊÕÕßºÍ·¢ËÍÕß¾ø¶Ô²»ÄÜÔÚÒ»¸öÏß³Ì£¬·ñÔò³ÌÐò»áËÀËø¡£ÔÚ¶àÏß³Ì¼äÐèÒªÍ¬²½µÄ³¡ºÏ¿ÉÄÜÐèÒªÕâ¸ö¡£
+        
+5. Qt::UniqueConnection£º¿ÉÒÔÍ¨¹ý°´Î»»ò£¨|£©ÓëÒÔÉÏËÄ¸ö½áºÏÔÚÒ»ÆðÊ¹ÓÃ¡£µ±ÉèÖÃ´Ë²ÎÊýÊ±£¬µ±Ä³¸öÐÅºÅºÍ²ÛÒÑ¾­Á¬½ÓÊ±£¬ÔÙ½øÐÐÖØ¸´µÄÁ¬½Ó¾Í»áÊ§°Ü£¬
+Ò²¾ÍÊÇ±ÜÃâÁËÖØ¸´Á¬½Ó¡£
 
+#### 5.ÐÅºÅ²ÛµÄËÄÖÖÐ´·¨ºÍÎåÖÖÁ¬½Ó·½Ê½£¿
+connect(ÐÅºÅ·¢³öÕß£¬ÐÅºÅ£¬ÐÅºÅ½ÓÊÕÕß£¬²Û£¬Á¬½Ó·½Ê½(Òþ²ØÄ¬ÈÏ×Ô¶¯Á¬½Ó))//Îå¸ö²ÎÊý
+ËÄÖÖÐ´·¨£º
+1.ÓÃºê£º
+connect(this,SIGNAL(clicked()),this,SLOT(colse())); //Á¬½Ó·½Ê½(Òþ²ØÄ¬ÈÏ×Ô¶¯Á¬½Ó))
+2.ÓÃº¯ÊýÖ¸Õë£º connect(this,&mainwindow::my_signal,this,&mainwindow::my_slot);
+3.ÓÃÖØÔØº¯ÊýÖ¸ÕëQoverload
+connect(this,Qoverload<²ÎÊý>::of(&mainwindow::my_signal),this,Qoverload<²ÎÊý>::of(&mainwindow::my_slot));
+4.lambda±í´ïÊ½(ÄäÃûº¯Êý) ÄäÃûº¯Êý´úÌæ²Û
+connect(this,&mainwindow::my_signal,this,[=]{qDebug()<<100;});
+Á¬½Ó·½Ê½£º×Ô¶¯Á¬½Ó(Ä¬ÈÏÁ¬½Ó·½Ê½)
+Ö±½ÓÁ¬½Ó(ÓÃÓÚµ¥Ïß³Ì,×Ô¶¯Æ¥Åä)
+¶ÓÁÐ(ÓÃÓÚ¶àÏß³ÌÒ²¿ÉÓÃÓÚµ¥Ïß³Ì,×Ô¶¯Æ¥Åä)
+×èÈû¶ÓÁÐ(¿çÏß³Ì,¶àÏß³Ì)
+Î¨Ò»Á¬½Ó(¿çÏß³Ì,¶àÏß³Ì)
 
-#### ËÄ¡¢ÃèÊöQTµÄTCPÍ¨Ñ¶Á÷³Ì
+#### 5¡¢¶àÏß³ÌÏÂ£¬ÐÅºÅ²Û·Ö±ðÔÚÊ²Ã´Ïß³ÌÖÐÖ´ÐÐ£¬ÈçºÎ¿ØÖÆ
+        
+¿ÉÒÔÍ¨¹ýconnectµÄµÚÎå¸ö²ÎÊý½øÐÐ¿ØÖÆÐÅºÅ²ÛÖ´ÐÐÊ±ËùÔÚµÄÏß³Ì
+
+¡¡¡¡
+connectÓÐ¼¸ÖÖÁ¬½Ó·½Ê½£¬Ö±½ÓÁ¬½ÓºÍ¶ÓÁÐÁ¬½Ó¡¢×Ô¶¯Á¬½Ó
+
+¡¡¡¡
+Ö±½ÓÁ¬½Ó£¨Qt::DirectConnection£©£ºÐÅºÅ²ÛÔÚÐÅºÅ·¢³öÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ
+
+¡¡¡¡
+¶ÓÁÐÁ¬½Ó (Qt::QueuedConnection)£ºÐÅºÅÔÚÐÅºÅ·¢³öÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ£¬²Ûº¯ÊýÔÚÐÅºÅ½ÓÊÕÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ
+
+¡¡¡¡
+×Ô¶¯Á¬½Ó  (Qt::AutoConnection)£º¶àÏß³ÌÊ±Îª¶ÓÁÐÁ¬½Óº¯Êý£¬µ¥Ïß³ÌÊ±ÎªÖ±½ÓÁ¬½Óº¯Êý¡£
+
+#### 6.ÎÊ£º¶ÔQtÔª¶ÔÏóÏµÍ³ÁË½â°É£¿
+        
+´ð£ºÁË½â¡£Qt¶Ô±ê×¼µÄC++½øÐÐÁËÀ©Õ¹£¬ÈçÐÅºÅ²Û¡¢¶ÔÏóÊôÐÔµÈ¡£QtµÄÔª¶ÔÏó±àÒëÏµÍ³MOCÊÇÒ»¸öÔ¤´¦ÀíÆ÷£¬
+µ±Qt¶ÁÈ¡Ô´ÎÄ¼þÊ±¼ì²âµ½ÀàÖÐ°üº¬ÓÐQ_OBJECTºêÊ±£¬Ôò»á´´½¨Ò»¸öÐÂµÄÎÄ¼þ£¨Éú³ÉÂ·¾¶ÏÂµÄmoc¿ªÍ·µÄÎÄ¼þ£©£¬
+½«Ô´Âë×ª»»ÎªC++±àÒëÆ÷¿ÉÒÔÊ¶±ðµÄ´úÂëÐ´Èëmoc¿ªÍ·µÄÎÄ¼þ£¬È»ºóC++±àÒëÆ÷¶ÔÆä½øÐÐ±àÒë¡£µ±ÄãµÄÀàÐèÒªÊ¹ÓÃQtµÄÀ©Õ¹¹¦ÄÜÊ±£¬
+ÈçÐÅºÅ²Û¡¢¶ÔÏóÊôÐÔµÈÊ±£¬Ôò±ØÐëÊ¹ÓÃMOC£¬·´Ö®Èç¹ûÄãµÄÀà²»Ê¹ÓÃÕâÐ©¹¦ÄÜµÄÊ±ºò²»ÒªÎÞÎ·µÄÊ¹ÓÃMOCÔö´óÔ´ÂëÌå»ý¡£
+Ê¹ÓÃMOCÏµÍ³µÄ·½·¨£º
+
+        1. ¼Ì³ÐQObject¡£
+
+        2. ÀàÖÐÌí¼ÓQ_OBJECTºê¡£
+
+#### 7.¶ÔQtµÄÊÂ¼þ´«µÝ
+https://www.cnblogs.com/xiaobingqianrui/p/9547924.html
+
+#### 8.q¡¢dÖ¸Õë¸ÉÊ²Ã´ÓÃµÄ£¿ÎªÁË½â¾öÊ²Ã´ÎÊÌâ£¿
+´ð£ºq×ÓÀà»ñÈ¡¸¸ÀàË½ÓÐ³ÉÔ±Ö¸Õë
+dÔÚ¸¸Àà»ñÈ¡×ÓÀàË½ÓÐ³ÉÔ±Ö¸Õë
+Îª½â¾ö¶þ½øÖÆ¼æÈÝ
+ËùÎ½¶þ½øÖÆ¼æÈÝ¶¯Ì¬¿â£¬Ö¸µÄÊÇÒ»¸öÔÚÀÏ°æ±¾¿âÏÂÔËÐÐµÄ³ÌÐò£¬ÔÚ²»¾­¹ý±àÒëµÄÇé¿öÏÂ£¬ÈÔÈ»ÄÜ¹»ÔÚÐÂµÄ°æ±¾¿âÏÂÔËÐÐ£»
+ÐèÒª¾­¹ý±àÒë²ÅÄÜÔÚÐÂ°æ±¾ÏÂÔËÐÐ£¬¶ø²»ÐèÒªÐÞ¸Ä¸Ã³ÌÐòÔ´´úÂë£¬ÎÒÃÇ¾ÍËµ¸Ã¶¯Ì¬¿âÊÇÔ´´úÂë¼æÈÝµÄ;
+
+#### 9.ÊÂ¼þÑ­»·
+QtµÄÖ÷ÊÂ¼þÑ­»·ÄÜ¹»´ÓÊÂ¼þ¶ÓÁÐÖÐ»ñÈ¡±¾µØ´°¿ÚÏµÍ³ÊÂ¼þ£¬È»ºóÅÐ¶ÏÊÂ¼þÀàÐÍ£¬²¢½«ÊÂ¼þ·Ö·¢¸øÌØ¶¨µÄ½ÓÊÕ¶ÔÏó¡£
+Ö÷ÊÂ¼þÑ­»·Í¨¹ýµ÷ÓÃQCoreApplication::exec()Æô¶¯£¬Ëæ×ÅQCoreApplication::exit()½áÊø£¬±¾µØµÄÊÂ¼þÑ­»·¿ÉÓÃÀûÓÃQEventLoop¹¹½¨¡£
+
+#### 10¡¢ÃèÊöQTµÄTCPÍ¨Ñ¶Á÷³Ì
 ·þÎñ¶Ë£º£¨QTcpServer£©
         ¢Ù´´½¨QTcpServer¶ÔÏó
 
@@ -291,7 +209,7 @@ Qt¾Í±£Ö¤ÁËÊÊµ±µÄ²ÛµÃµ½ÁËµ÷ÓÃ£¬¼´Ê¹¹ØÁªµÄ¶ÔÏóÔÚÔËÐÐÊ±±»É¾³ý¡£³ÌÐòÒ²²»»á±¼À£¡£
         
 ¢ßµ÷ÓÃwrite³ÉÔ±º¯Êý·¢ËÍÊý¾Ý
 
-#### ¿Í»§¶Ë£º£¨QTcpSocket£©
+¿Í»§¶Ë£º£¨QTcpSocket£©
 
         ¢Ù´´½¨QTcpSocket¶ÔÏó
 
@@ -305,7 +223,7 @@ Qt¾Í±£Ö¤ÁËÊÊµ±µÄ²ÛµÃµ½ÁËµ÷ÓÃ£¬¼´Ê¹¹ØÁªµÄ¶ÔÏóÔÚÔËÐÐÊ±±»É¾³ý¡£³ÌÐòÒ²²»»á±¼À£¡£
 
         ¢ÝÊ¹ÓÃwrite·¢ËÍÊý¾Ý£¬read½ÓÊÕÊý¾Ý
 
-#### Îå¡¢ ÃèÊöUDP Ö® UdpSocketÍ¨Ñ¶
+#### 11¡¢ ÃèÊöUDP Ö® UdpSocketÍ¨Ñ¶
            
 UDP£¨User Datagram Protocol¼´ÓÃ»§Êý¾Ý±¨Ð­Òé£©ÊÇÒ»¸öÇáÁ¿¼¶µÄ£¬²»¿É¿¿µÄ£¬ÃæÏòÊý¾Ý±¨µÄÎÞÁ¬½ÓÐ­Òé¡£
 ÔÚÍøÂçÖÊÁ¿ÁîÈËÊ®·Ö²»ÂúÒâµÄ»·¾³ÏÂ£¬UDPÐ­ÒéÊý¾Ý°ü¶ªÊ§ÑÏÖØ¡£
@@ -319,59 +237,86 @@ UDP£¨User Datagram Protocol¼´ÓÃ»§Êý¾Ý±¨Ð­Òé£©ÊÇÒ»¸öÇáÁ¿¼¶µÄ£¬²»¿É¿¿µÄ£¬ÃæÏòÊý¾Ý±
         
 Á÷³Ì£º¢Ù´´½¨QUdpSocketÌ×½Ó×Ö¶ÔÏó ¢ÚÈç¹ûÐèÒª½ÓÊÕÊý¾Ý£¬±ØÐë°ó¶¨¶Ë¿Ú ¢Û·¢ËÍÊý¾ÝÓÃwriteDatagram£¬½ÓÊÕÊý¾ÝÓÃ readDatagram ¡£
 
-#### Áù¡¢¶àÏß³ÌÊ¹ÓÃÊ¹ÓÃ·½·¨
-        ·½·¨Ò»£º¢Ù´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú¢ÚÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, 
-½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ ¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
+
+#### 12£º¶ÔQGraphicsViewÁË½â°É£¿
+
+#### 13¡¢ÃèÊöQTÖÐµÄÎÄ¼þÁ÷(QTextStream)ºÍÊý¾ÝÁ÷(QDataStream)µÄÇø±ð
+       
+ÎÄ¼þÁ÷(QTextStream)¡£²Ù×÷ÇáÁ¿¼¶Êý¾Ý£¨int,double,QString£©Êý¾ÝÐ´ÈëÎÄ±¾¼þÖÐÒÔºóÒÔÎÄ±¾µÄ·½Ê½³ÊÏÖ¡£
+
+       
+Êý¾ÝÁ÷(QDataStream)¡£Í¨¹ýÊý¾ÝÁ÷¿ÉÒÔ²Ù×÷¸÷ÖÖÊý¾ÝÀàÐÍ£¬°üÀ¨¶ÔÏó£¬´æ´¢µ½ÎÄ¼þÖÐÊý¾ÝÎª¶þ½øÖÆ¡£
 
         
-·½·¨¶þ£º¢Ù½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý¢ÚÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó 
-¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó ¢Ü½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ ¢ÝÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì ¢ÞÍ¨¹ýÐÅºÅ²ÛµÄ·½Ê½, 
-Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
+ÎÄ¼þÁ÷£¬Êý¾ÝÁ÷¶¼¿ÉÒÔ²Ù×÷´ÅÅÌÎÄ¼þ£¬Ò²¿ÉÒÔ²Ù×÷ÄÚ´æÊý¾Ý¡£Í¨¹ýÁ÷¶ÔÏó¿ÉÒÔ½«¶ÔÏó´ò°üµ½ÄÚ´æ£¬½øÐÐÊý¾ÝµÄ´«Êä¡£
 
-¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî: 
-* 1. ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó 
-* 2. ×ÓÏß³ÌÖÐ²»ÄÜ´¦Àíui´°¿Ú(uiÏà¹ØµÄÀà) 
-* 
-3. ×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°´°¿Ú
 
-#### Æß¡¢¶àÏß³ÌÏÂ£¬ÐÅºÅ²Û·Ö±ðÔÚÊ²Ã´Ïß³ÌÖÐÖ´ÐÐ£¬ÈçºÎ¿ØÖÆ
+#### 14.qtÄ£ÐÍ
+´ð£ºQtÖÐµÄViewÖ÷ÒªÓÐÈýÖÖQListView£¬QTreeView, QTabelView
+¶ø¶ÔÓ¦µÄModelÊÇ£ºQStringListModel, QAbstractItemModel , QStandardItemModel¡£
+³éÏó ±ê×¼
+
+
+#### 14£ºQtÖÐµÄMVDÁË½â°É£¿
         
-¿ÉÒÔÍ¨¹ýconnectµÄµÚÎå¸ö²ÎÊý½øÐÐ¿ØÖÆÐÅºÅ²ÛÖ´ÐÐÊ±ËùÔÚµÄÏß³Ì
+´ð£ºÁË½â¡£QtµÄMVD°üº¬Èý¸ö²¿·ÖModel£¨Ä£ÐÍ£©£¬View£¨ÊÓÍ¼£©£¬´úÀí£¨Delegate£©¡£
+Model·ñÔò±£´æÊý¾Ý£¬View¸ºÔðÕ¹Ê¾Êý¾Ý£¬Delegate¸ºÔðItemÑùÊ½»æÖÆ»ò´¦ÀíÊäÈë¡£
+ÕâÈý²¿·ÖÍ¨¹ýÐÅºÅ²ÛÀ´½øÐÐÍ¨ÐÅ£¬µ±ModelÖÐÊý¾Ý·¢Éú±ä»¯Ê±½«»á·¢ËÍÐÅºÅµ½View£¬ÔÚViewÖÐ±à¼­Êý¾ÝÊ±£¬
+Delegate¸ºÔð½«±à¼­×´Ì¬·¢ËÍ¸øModel²ã¡£»ùÀà·Ö±ðÎªQAbstractItemModel¡¢QAbstractItemView¡¢QAbstractItemDelegate¡£
+QtÖÐÌá¹©ÁËÄ¬ÈÏÊµÏÖµÄMVDÀà£¬ÈçQTableWidget¡¢QListWidget¡¢QTreeWidgetµÈ¡£
 
-¡¡¡¡
-connectÓÐ¼¸ÖÖÁ¬½Ó·½Ê½£¬Ö±½ÓÁ¬½ÓºÍ¶ÓÁÐÁ¬½Ó¡¢×Ô¶¯Á¬½Ó
+### 15.²å¼þ¹ÜÀíÆ÷
+https://blog.csdn.net/kenfan1647/category_9967854.html
 
-¡¡¡¡
-Ö±½ÓÁ¬½Ó£¨Qt::DirectConnection£©£ºÐÅºÅ²ÛÔÚÐÅºÅ·¢³öÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ
+### 16.²å¼þÖ®¼äÍ¨ÐÅ
+https://blog.csdn.net/kenfan1647/category_9967854.html
 
-¡¡¡¡
-¶ÓÁÐÁ¬½Ó (Qt::QueuedConnection)£ºÐÅºÅÔÚÐÅºÅ·¢³öÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ£¬²Ûº¯ÊýÔÚÐÅºÅ½ÓÊÕÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ
+### 17¡¢Qt
+1.Ôª¶ÔÏóÏµÍ³£¨Ôª¶ÔÏóÏµÍ³Ìá¹©£©
+2.ÐÅºÅ²Û£¨ÐÅºÅ²ÛÁ¬½ÓµÄ3ÖÖ·½Ê½£¬µÚÎå¸ö²ÎÊý£¬ÐÅºÅ²ÛºÍÏß³ÌÒ»ÆðÊ¹ÓÃ£©
+3.¶àÏß³Ì£¨´´½¨Ïß³ÌµÄ2ÖÖ·½Ê½£¬Ïß³ÌÍ¬²½µÄ5ÖÖ·½Ê½£¬·ÀÖ¹½çÃæ¶³½áµÄ2ÖÖ·½Ê½£©
+4.ÊÂ¼þÏµÍ³£¨×Ô¶¨ÒåÊÂ¼þ´¦Àíº¯Êý3ÖÖ·½Ê½£©
+5.QSS
+6.qmake
+7.QtÏÂTCPÍ¨ÐÅ¹ý³Ì
+8.QtÏÂUDPÍ¨ÐÅ¹ý³Ì
+9.¹ú¼Ê»¯
+5.ÐÅºÅ²ÛÁ¬½ÓÓÐ¼¸ÖÖ·½Ê½£¿Ö±½ÓÁ¬½ÓÊÇÔõÃ´Ö´ÐÐµÄ£¿
+2.QtÖÐ£¬ËµÒ»ÏÂ´´½¨Ïß³Ì·½Ê½
+6.ÐÅºÅ²ÛµÚÎå¸ö²ÎÊý£º
+7. qtÖÐQObjectÀàÊÇ×öÊ²Ã´µÄ£¬ÓÐÄÄÐ©¹¦ÄÜ?
+8.https://blog.csdn.net/xpg4321/article/details/101278293
+1.³ÌÐò´ò°üËµÒ»ÏÂ¡£
+1.qtÖÐ¶¼ÓÃµ½ÁËÄÄÐ©Éè¼ÆÄ£Ê½
+1.QtÌá¹©ÁË¼¸ÖÖÍ¬²½·½Ê½
+14.ÐÅºÅ²ÛµÄÊµÏÖÔ­Àí
 
-¡¡¡¡
-×Ô¶¯Á¬½Ó  (Qt::AutoConnection)£º¶àÏß³ÌÊ±Îª¶ÓÁÐÁ¬½Óº¯Êý£¬µ¥Ïß³ÌÊ±ÎªÖ±½ÓÁ¬½Óº¯Êý¡£
+#### 1.Ïß³ÌºÍ½ø³Ì
+#### £¨1£©½ø³ÌÊÇ×ÊÔ´·ÖÅäµÄ¶ÀÁ¢µ¥Î»£»Ïß³ÌÊÇ×ÊÔ´µ÷¶ÈµÄ¶ÀÁ¢µ¥Î»
+#### £¨2£©Ò»¸ö½ø³ÌÓÉ¶à¸öÏß³Ì×é³É£»
+#### £¨3£©½ø³ÌÖ®¼äÇÐ»»¿ªÏú´ó£»Ïß³ÌÖ®¼äÇÐ»»µÄ¿ªÏúÐ¡
 
+#### 2.Ïß³ÌÍ¬²½ºÍ»¥³â
+
+#### 3.¶àÏß³ÌÍ¬²½
+1.ÁÙ½çÇø±»³õÊ¼»¯ºó£¬µ±³ÌÐò½øÈëÁÙ½çÇøºó±ãÓµÓÐÁÙ½çÇøµÄËùÓÐÈ¨£¬ÆäÓàÏß³ÌÎÞÈ¨½øÈëÖ»ÄÜµÈ¶Ô·½ÊÍ·ÅÁÙ½çÇøÖ®ºó£¬·½¿É½øÈëÁÙ½çÇøÓµÓÐÆäËùÓÐÈ¨ÔÙ¶ÔÁÙ½çÇø½øÐÐ²Ù×÷ÁÙ½çÇøÎªÒÀ´Î·ÃÎÊ£¬²»ÄÜÊµÏÖÆäÖÐÒ»¸öÏß³ÌÒ»ÊÍ·ÅÁÙ½çÇø¾Í»á±»ÁíÒ»¸öÏß³Ì·ÃÎÊÁÙ½çÇø£¡²»ÄÜÊµÏÖÊµÊ±¼àÌý;
+2.ÊÂ¼þ¶ÔÏóÊÇÖ¸ÓÃ»§ÔÚ³ÌÐòÖÐÊ¹ÓÃÄÚºË¶ÔÏóµÄÓÐÎÞÐÅºÅ×´Ì¬ÊµÏÖÏß³ÌµÄÍ¬²½ÁÙ½çÇø±»³õÊ¼»¯ºóÒ»µ©ÊÂ¼þ¶ÔÏó±»ÉèÖÃÎªÓÐÐÅºÅ Á¢¿Ì»á±»ÆäÓàÏß³Ì·ÃÎÊ£¡ÄÜÊµÏÖÊµÊ±¼àÌý
+3.»¥³â¶ÔÏó»¹¿ÉÒÔÔÚ½ø³Ì¼äÊ¹ÓÃ£¬ÔÚÊµÏÖÏß³ÌÍ¬²½Ê±°üº¬Ò»¸öÏß³ÌIDºÍÒ»¸ö¼ÆÊýÆ÷£¬
+Ïß³ÌID±íÊ¾ÓµÓÐ»¥³â¶ÔÏóµÄÏß³Ì£¬¼ÆÊýÆ÷±íÊ¾¸Ã»¥³â¶ÔÏó±»Í¬Ò»Ïß³ÌËùÊ¹ÓÃ´ÎÊý
+Ò»µ©»¥³â¶ÔÏó±»ÊÍ·Å Á¢¿Ì»á±»ÆäËüÕýÔÚµÈ´ýµÄÏß³Ì·ÃÎÊ£¡ÄÜÊµÏÖÊµÊ±¼àÌý;
 
 #### 1.Çë½éÉÜÏÂ qtÖÐQObjectÀàÊÇ×öÊ²Ã´µÄ£¬ÓÐÄÄÐ©¹¦ÄÜ?
 ºÜ¶àÈËÖ»ÖªµÀºÍÐÅºÅ²Û»úÖÆÓÐ¹ØÏµ
-
 Èç¹û»¹ÄÜ´ð³ö ¸¸×ÓÊ÷½Úµã¹ÜÀí »ù±¾¾ÍËã¼°¸ñ¡£
-
 Èô»¹ÄÜ»Ø´ð³ö rtti ¶¨Ê±Æ÷ ÊôÐÔÏµÍ³ µÈ¾ÍËãÓÅÐã
-
 #### 2.½ÓÉÏ¸öÎÊÌâ ÇëËµÏÂqtµÄ¸¸×ÓÊ÷½Úµã¹ÜÀí»úÖÆ
-
 #### 3.½ÓÉÏÎÊ£¬³ýÁËqt¸¸×ÓÊ÷¹ÜÀí»úÖÆÄÜÖÇÄÜ¹ÜÀí¶ÔÏóÉúÃüÖÜÆÚ£¬»¹ÓÐÄÄÐ©±ÜÃâÄÚ´æÐ¹Â¶µÄ»úÖÆ?
-
 #### 4.´ó²¿·ÖÈËÄÜ´ð³öÖÇÄÜÖ¸Õë£¬¾Í¿ÉÒÔÎÊÏÂstd::shared_ptrµÄÊµÏÖ»úÖÆ¡£
-
 #### 5.ÈçÄÜ»Ø´ð³ö »ùÓÚÒýÓÃ¼ÆÊý£¬¼ÆÊýÎª0ÔòÇåÁã£¬Ôò¿ÉÒÔÎÊÏÂ¹²ÏíÊ½Ö¸ÕëµÄÈ±µãÊÇÊ²Ã´?
 
 
-
 #### 6.ÈçÄÜËµ³ö ÐÔÄÜËðÊ§ºÍÑ­»·ÒýÓÃ£¬Ôò¿ÉÒÔÎÊÈçºÎÆÆ½âÑ­»·ÒýÓÃ¡£»á´ø³öÈõÖ¸Õë¡£
-
 #### 7.½ÓÎÊÌâ3 Èç¹ûÄÜ´ð³öÄÚ´æ³Ø£¬ÔòÓÐ±ØÒªÎÊÏÂÄÚ´æ³ØµÄÊµÏÖ»úÖÆºÍÔÚÄÚ´æ³ØÖÐ·ÖÅä¶ÔÏóµÄÐèÒª×¢ÒâµÄÊÂÏî? ºÜÉÙÓÐÈËÄÜ»Ø´ð³öÏÔÊ½µ÷ÓÃ¹¹ÔìºÍÎö¹¹º¯Êý¡£
-
 #### 8.Éè¼ÆÄ£Ê½Ïà¹ØÇëËµÏÂqtÖÐ¶¼ÓÃµ½ÁËÄÄÐ©Éè¼ÆÄ£Ê½ ÈçºÎÄÜ´ð³ö ¹Û²ìÕßÄ£Ê½ ²»µÃ·Ö
 ÈçÄÜ»Ø´ð³ö µ¥Àý ¹¤³§ ÔðÈÎÁ´ ×´Ì¬»ú ±¸ÍüÂ¼ ÏíÔª ×°ÊÎÆ÷ µÈÔò¿ÉÒÔÎÊÏÂÄÄÀïÊ¹ÓÃµ½ÁË?  ´ËÀàÄ£Ê½ÓÅÈ±µãÊ²Ã´?
 ÒÔÉÏ8¸öÎÊÌâÈç¹ûÄÜÍêÕû»Ø´ð4¸öÒÔÉÏ ÔòËµÃ÷c++»ù±¾¹¦ ÃæÏò¶ÔÏó·ÖÎöÉè¼ÆºÍÉè¼ÆÄ£Ê½¶¼ÕÆÎÕµÄ²»´í¡£
