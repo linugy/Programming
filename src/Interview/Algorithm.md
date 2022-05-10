@@ -1,8 +1,5 @@
-#### 第一阶段：学习
-
-#### 第二阶段：面试题
-1.排序算法:冒泡,插入,选择,快排
-3.实现二分查找
+#### 1.排序算法:冒泡,插入,选择,快排。（参考排序算法）
+#### 2.二分查找
 ```
 int binarySearch(int arr[], int key)
 {
@@ -22,19 +19,50 @@ int binarySearch(int arr[], int key)
     return -1;
 }
 ```
-动态规划与贪心算法的区别（背包问题分析）
-算法问题： 网格中有 2 个点，怎么找到从 A 到 B 的最短路径？（用广度优先搜索）
-快排的思路
-IPC 算法
 
-找出数组中次数最多的前 k 个数 
-计算十六进制数中1的个数
-用两个线程实现循环加数
-长二进制反转
-写代码：找出数组中数量超过一半的元素
-找出数组中最小的K个数
-长整数相加
-代码题：十进制字符串转十六进制字符串
-找出出现频率最高的前 K 个数，或者从海量数据中找出最大的前 K 个数
+#### 3.找出数组中次数最多的前 k 个数 
+https://blog.csdn.net/fuyufjh/article/details/48037127
 
-#### 第三阶段：精学
+#### 4.计算十六进制数中1的个数（16进制数-4字节-32位）
+```
+int NumberOf1(int n) 
+{
+    int count = 0;
+    for (int i = 0; i < 32; i++)
+    {
+        if (((n >> i) & 1) == 1)
+        {
+            count++;
+        }
+    }
+    return count;   
+}
+```
+
+#### 5.长二进制反转（16进制数-4字节-32位）
+```
+unsigned int reverse(int num)
+{
+    
+    int value = 0;
+    for (int i = 0; i < 32; i++) {
+	value = value << 1;
+	value = value | ((num >> i) & 1)
+    }
+    return value;
+}
+```
+
+#### 6.找出数组中数量超过一半的元素
+https://blog.csdn.net/qiana_/article/details/79176936
+
+#### 7.找出数组中最小的K个数
+https://blog.csdn.net/ThinPikachu/article/details/105870777
+https://blog.csdn.net/gao__xue/article/details/80018869
+
+#### 8.长整数相加
+https://blog.csdn.net/weixin_42205987/article/details/82011724
+
+#### 9.十进制字符串转十六进制字符串
+
+
