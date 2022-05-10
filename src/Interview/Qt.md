@@ -1,70 +1,22 @@
-#### 1.¶àÏß³ÌÊ¹ÓÃ·½·¨
-·½·¨Ò»£º¢Ù´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú¢ÚÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, 
-½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ ¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
-
+#### 1.¶àÏß³Ì
+##### £¨1£©£º¢Ù´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú¢ÚÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, ½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ ¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
+ÓÅµã£ºÊµÏÖ¼òµ¥£¬¿ÉÒÔÓÃÐÅºÅ²ÛÍ¨ÐÅ¡£
+È±µã£ºÐèÒª×Ô¼º¹ÜÀíÏß³ÌµÄ´´½¨ÊÍ·Å£¬Æµ·±µØ´´½¨ÊÍ·ÅÐ§ÂÊ²»¸ß¡£ËùÒÔÊÊºÏ³£×¤³ÌÐòµÄÏß³ÌÊ¹ÓÃ¡£ÁíÍâÒòÎªQThread¶ÔÏóÊôÓÚ¸¸Ïß³Ì£¬ËùÒÔ¶ÔÏóÖÐµÄ²Ûº¯Êý£¨Èç¹ûÓÐµÄ»°£©ÆäÊµ»áÔÚ¸¸Ïß³ÌÖ´ÐÐ¡£
         
-·½·¨¶þ£º¢Ù½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý¢ÚÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó 
-¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó ¢Ü½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ ¢ÝÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì ¢ÞÍ¨¹ýÐÅºÅ²ÛµÄ·½Ê½, 
-Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
-
-¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî: 
-* 1. ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó 
-* 2. ×ÓÏß³ÌÖÐ²»ÄÜ´¦Àíui´°¿Ú(uiÏà¹ØµÄÀà) 
-* 
-3. ×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°´°¿Ú
-
-´ð£ºÁË½â¡£QtµÄ¶àÏß³ÌµÄÊµÏÖ·½Ê½ÓÐÈçÏÂËÄÖÖ£º
-
-        
-1. QThreadÀà£¬ÖØÐ´QThreadÀàµÄrun·½·¨¡£
-
-        ÓÅµã£ºÊµÏÖ¼òµ¥£¬¿ÉÒÔÓÃÐÅºÅ²ÛÍ¨ÐÅ¡£
-
-        
-È±µã£ºÐèÒª×Ô¼º¹ÜÀíÏß³ÌµÄ´´½¨ÊÍ·Å£¬Æµ·±µØ´´½¨ÊÍ·ÅÐ§ÂÊ²»¸ß¡£ËùÒÔÊÊºÏ³£×¤³ÌÐòµÄÏß³ÌÊ¹ÓÃ¡£
-ÁíÍâÒòÎªQThread¶ÔÏóÊôÓÚ¸¸Ïß³Ì£¬ËùÒÔ¶ÔÏóÖÐµÄ²Ûº¯Êý£¨Èç¹ûÓÐµÄ»°£©ÆäÊµ»áÔÚ¸¸Ïß³ÌÖ´ÐÐ¡£
-
-        
-2. QThreadÀàÓëMoveToThread£¬´´½¨¶ÔÏó¼Ì³ÐQObject£¬½«¶ÔÏóÒÆ¶¯µ½×ÓÏß³Ì¶ÔÏó¡£
-
-        
+##### £¨2£©£º¢Ù½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý¢ÚÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó ¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó ¢Ü½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ 
+¢ÝÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì ¢ÞÍ¨¹ýÐÅºÅ²ÛµÄ·½Ê½, Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
 ÓÅµã£ºÊµÏÖ¼òµ¥£¬Ê¹ÓÃÓÚ±È½Ï¸´ÔÓµÄÒµÎñ³¡¾°¡£
+È±µã£ºÖ»ÄÜÍ¨¹ýÐÅºÅ²ÛµÄ·½Ê½µ÷ÓÃÒµÎñ¶ÔÏóµÄ½Ó¿Ú¡£ÇÒ²»ÄÜ¸ø´Ë¶ÔÏóÖ¸¶¨¸¸¶ÔÏó¡£
 
-        È±µã£ºÖ»ÄÜÍ¨¹ýÐÅºÅ²ÛµÄ·½Ê½µ÷ÓÃÒµÎñ¶ÔÏóµÄ½Ó¿Ú¡£ÇÒ²»ÄÜ¸ø´Ë¶ÔÏóÖ¸¶¨¸¸¶ÔÏó¡£
-
-        
-3. QThreadPoolÓëQRunnable£¬¼Ì³ÐQRunnableÊµÏÖrun·½·¨Íê³ÉÒµÎñÀà´´½¨£¬ÓÉQThreadPoolÆô¶¯ÒµÎñÀà¡£
-
-        
+##### £¨3£©QThreadPoolÓëQRunnable£¬¼Ì³ÐQRunnableÊµÏÖrun·½·¨Íê³ÉÒµÎñÀà´´½¨£¬ÓÉQThreadPoolÆô¶¯ÒµÎñÀà¡£
 ÓÅµã£ºÎÞÐè¹Ø×¢Ïß³Ì×ÊÔ´¹ÜÀí£¬²»»áÆµ·±´´½¨ÓëÊÍ·ÅÏß³Ì¡£ËùÒÔÊÊÓÃÐèÒªÆµ·±´´½¨Ïú»ÙÏß³ÌµÄÒµÎñ³¡¾°¡£
-
-        È±µã£ºÃ»É¶È±µã¡£
-
         
-4. QtConcurrent::run()Ö±½Ó½«ÈÎÎñ¶ª½ø×ÓÏß³ÌÖ´ÐÐ¡£
+##### £¨4£©QtConcurrent::run()Ö±½Ó½«ÈÎÎñ¶ª½ø×ÓÏß³ÌÖ´ÐÐ¡£
+ÓÅµã£ºµ÷ÓÃ¼òµ¥£¬ÎÞÐè¹Ø×¢Ïß³Ì×ÊÔ´¹ÜÀí£¬²»»áÆµ·±´´½¨ÓëÊÍ·ÅÏß³Ì¡£
 
-        ÓÅµã£ºµ÷ÓÃ¼òµ¥£¬ÎÞÐè¹Ø×¢Ïß³Ì×ÊÔ´¹ÜÀí£¬²»»áÆµ·±´´½¨ÓëÊÍ·ÅÏß³Ì¡£
+##### ¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî:£¨1£©ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó£»£¨2£©×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°ui´°¿Ú(uiÏà¹ØµÄÀà)
 
-        
-È±µã£ºÃ»É¶È±µã¡£
-
-µÚÒ»ÖÖ·½·¨:
-´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú
-ÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, ½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ
-ÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
-µÚ¶þÖÖ·½·¨:
-½«ÒµÎñ´¦Àí³éÏó³ÉÒ»¸öÒµÎñÀà, ÔÚ¸ÃÀàÖÐ´´½¨Ò»¸öÒµÎñ´¦Àíº¯Êý
-ÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»QThreadÀà¶ÔÏó
-ÔÚÖ÷Ïß³ÌÖÐ´´½¨Ò»¸öÒµÎñÀà¶ÔÏó
-½«ÒµÎñÀà¶ÔÏóÒÆ¶¯µ½×ÓÏß³ÌÖÐ
-ÔÚÖ÷Ïß³ÌÖÐÆô¶¯×ÓÏß³Ì
-Í¨¹ýÐÅºÅ²ÛµÄ·½Ê½, Ö´ÐÐÒµÎñÀàÖÐµÄÒµÎñ´¦Àíº¯Êý
-¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî:
-ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó
-×ÓÏß³ÌÖÐ²»ÄÜ´¦Àíui´°¿Ú(uiÏà¹ØµÄÀà)
-×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°´°¿Ú
-
-#### 2.QtÐÅºÅºÍ²ÛµÄ±¾ÖÊÊÇÊ²Ã´ 
+#### 2.ÐÅºÅºÍ²Û
 »Øµ÷º¯Êý¡£ÐÅºÅ»òÊÇ´«µÝÖµ£¬»òÊÇ´«µÝ¶¯×÷±ä»¯£»²Ûº¯ÊýÏìÓ¦ÐÅºÅ»òÊÇ½ÓÊÕÖµ£¬»òÕß¸ù¾Ý¶¯×÷±ä»¯À´×ö³ö¶ÔÓ¦²Ù×÷¡£
 
 #### 2.qtÐÅºÅ²ÛÊÇÊ²Ã´£¿
@@ -146,23 +98,24 @@ connect(this,&mainwindow::my_signal,this,[=]{qDebug()<<100;});
 ×èÈû¶ÓÁÐ(¿çÏß³Ì,¶àÏß³Ì)
 Î¨Ò»Á¬½Ó(¿çÏß³Ì,¶àÏß³Ì)
 
-#### 5¡¢¶àÏß³ÌÏÂ£¬ÐÅºÅ²Û·Ö±ðÔÚÊ²Ã´Ïß³ÌÖÐÖ´ÐÐ£¬ÈçºÎ¿ØÖÆ
+#### 3¡¢¶àÏß³ÌÓëÐÅºÅ²Û
         
 ¿ÉÒÔÍ¨¹ýconnectµÄµÚÎå¸ö²ÎÊý½øÐÐ¿ØÖÆÐÅºÅ²ÛÖ´ÐÐÊ±ËùÔÚµÄÏß³Ì
-
 ¡¡¡¡
 connectÓÐ¼¸ÖÖÁ¬½Ó·½Ê½£¬Ö±½ÓÁ¬½ÓºÍ¶ÓÁÐÁ¬½Ó¡¢×Ô¶¯Á¬½Ó
-
 ¡¡¡¡
 Ö±½ÓÁ¬½Ó£¨Qt::DirectConnection£©£ºÐÅºÅ²ÛÔÚÐÅºÅ·¢³öÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ
-
 ¡¡¡¡
 ¶ÓÁÐÁ¬½Ó (Qt::QueuedConnection)£ºÐÅºÅÔÚÐÅºÅ·¢³öÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ£¬²Ûº¯ÊýÔÚÐÅºÅ½ÓÊÕÕßËùÔÚµÄÏß³ÌÖÐÖ´ÐÐ
 
-¡¡¡¡
 ×Ô¶¯Á¬½Ó  (Qt::AutoConnection)£º¶àÏß³ÌÊ±Îª¶ÓÁÐÁ¬½Óº¯Êý£¬µ¥Ïß³ÌÊ±ÎªÖ±½ÓÁ¬½Óº¯Êý¡£
 
-#### 6.ÎÊ£º¶ÔQtÔª¶ÔÏóÏµÍ³ÁË½â°É£¿
+
+
+
+
+
+#### 4.ÎÊ£ºÔª¶ÔÏóÏµÍ³
         
 ´ð£ºÁË½â¡£Qt¶Ô±ê×¼µÄC++½øÐÐÁËÀ©Õ¹£¬ÈçÐÅºÅ²Û¡¢¶ÔÏóÊôÐÔµÈ¡£QtµÄÔª¶ÔÏó±àÒëÏµÍ³MOCÊÇÒ»¸öÔ¤´¦ÀíÆ÷£¬
 µ±Qt¶ÁÈ¡Ô´ÎÄ¼þÊ±¼ì²âµ½ÀàÖÐ°üº¬ÓÐQ_OBJECTºêÊ±£¬Ôò»á´´½¨Ò»¸öÐÂµÄÎÄ¼þ£¨Éú³ÉÂ·¾¶ÏÂµÄmoc¿ªÍ·µÄÎÄ¼þ£©£¬
@@ -174,21 +127,23 @@ connectÓÐ¼¸ÖÖÁ¬½Ó·½Ê½£¬Ö±½ÓÁ¬½ÓºÍ¶ÓÁÐÁ¬½Ó¡¢×Ô¶¯Á¬½Ó
 
         2. ÀàÖÐÌí¼ÓQ_OBJECTºê¡£
 
-#### 7.¶ÔQtµÄÊÂ¼þ´«µÝ
+
+#### 5.ÊÂ¼þ´«µÝ
 https://www.cnblogs.com/xiaobingqianrui/p/9547924.html
 
-#### 8.q¡¢dÖ¸Õë¸ÉÊ²Ã´ÓÃµÄ£¿ÎªÁË½â¾öÊ²Ã´ÎÊÌâ£¿
+#### 6.ÊÂ¼þÑ­»·
+QtµÄÖ÷ÊÂ¼þÑ­»·ÄÜ¹»´ÓÊÂ¼þ¶ÓÁÐÖÐ»ñÈ¡±¾µØ´°¿ÚÏµÍ³ÊÂ¼þ£¬È»ºóÅÐ¶ÏÊÂ¼þÀàÐÍ£¬²¢½«ÊÂ¼þ·Ö·¢¸øÌØ¶¨µÄ½ÓÊÕ¶ÔÏó¡£
+Ö÷ÊÂ¼þÑ­»·Í¨¹ýµ÷ÓÃQCoreApplication::exec()Æô¶¯£¬Ëæ×ÅQCoreApplication::exit()½áÊø£¬±¾µØµÄÊÂ¼þÑ­»·¿ÉÓÃÀûÓÃQEventLoop¹¹½¨¡£
+
+#### 7.q¡¢dÖ¸Õë¸ÉÊ²Ã´ÓÃµÄ£¿ÎªÁË½â¾öÊ²Ã´ÎÊÌâ£¿
 ´ð£ºq×ÓÀà»ñÈ¡¸¸ÀàË½ÓÐ³ÉÔ±Ö¸Õë
 dÔÚ¸¸Àà»ñÈ¡×ÓÀàË½ÓÐ³ÉÔ±Ö¸Õë
 Îª½â¾ö¶þ½øÖÆ¼æÈÝ
 ËùÎ½¶þ½øÖÆ¼æÈÝ¶¯Ì¬¿â£¬Ö¸µÄÊÇÒ»¸öÔÚÀÏ°æ±¾¿âÏÂÔËÐÐµÄ³ÌÐò£¬ÔÚ²»¾­¹ý±àÒëµÄÇé¿öÏÂ£¬ÈÔÈ»ÄÜ¹»ÔÚÐÂµÄ°æ±¾¿âÏÂÔËÐÐ£»
 ÐèÒª¾­¹ý±àÒë²ÅÄÜÔÚÐÂ°æ±¾ÏÂÔËÐÐ£¬¶ø²»ÐèÒªÐÞ¸Ä¸Ã³ÌÐòÔ´´úÂë£¬ÎÒÃÇ¾ÍËµ¸Ã¶¯Ì¬¿âÊÇÔ´´úÂë¼æÈÝµÄ;
 
-#### 9.ÊÂ¼þÑ­»·
-QtµÄÖ÷ÊÂ¼þÑ­»·ÄÜ¹»´ÓÊÂ¼þ¶ÓÁÐÖÐ»ñÈ¡±¾µØ´°¿ÚÏµÍ³ÊÂ¼þ£¬È»ºóÅÐ¶ÏÊÂ¼þÀàÐÍ£¬²¢½«ÊÂ¼þ·Ö·¢¸øÌØ¶¨µÄ½ÓÊÕ¶ÔÏó¡£
-Ö÷ÊÂ¼þÑ­»·Í¨¹ýµ÷ÓÃQCoreApplication::exec()Æô¶¯£¬Ëæ×ÅQCoreApplication::exit()½áÊø£¬±¾µØµÄÊÂ¼þÑ­»·¿ÉÓÃÀûÓÃQEventLoop¹¹½¨¡£
 
-#### 10¡¢ÃèÊöQTµÄTCPÍ¨Ñ¶Á÷³Ì
+#### 8¡¢ÃèÊöQTµÄTCPÍ¨Ñ¶Á÷³Ì
 ·þÎñ¶Ë£º£¨QTcpServer£©
         ¢Ù´´½¨QTcpServer¶ÔÏó
 
@@ -223,7 +178,7 @@ QtµÄÖ÷ÊÂ¼þÑ­»·ÄÜ¹»´ÓÊÂ¼þ¶ÓÁÐÖÐ»ñÈ¡±¾µØ´°¿ÚÏµÍ³ÊÂ¼þ£¬È»ºóÅÐ¶ÏÊÂ¼þÀàÐÍ£¬²¢½«ÊÂ¼þ·Ö
 
         ¢ÝÊ¹ÓÃwrite·¢ËÍÊý¾Ý£¬read½ÓÊÕÊý¾Ý
 
-#### 11¡¢ ÃèÊöUDP Ö® UdpSocketÍ¨Ñ¶
+#### 9¡¢ ÃèÊöUDP Ö® UdpSocketÍ¨Ñ¶
            
 UDP£¨User Datagram Protocol¼´ÓÃ»§Êý¾Ý±¨Ð­Òé£©ÊÇÒ»¸öÇáÁ¿¼¶µÄ£¬²»¿É¿¿µÄ£¬ÃæÏòÊý¾Ý±¨µÄÎÞÁ¬½ÓÐ­Òé¡£
 ÔÚÍøÂçÖÊÁ¿ÁîÈËÊ®·Ö²»ÂúÒâµÄ»·¾³ÏÂ£¬UDPÐ­ÒéÊý¾Ý°ü¶ªÊ§ÑÏÖØ¡£
@@ -238,9 +193,9 @@ UDP£¨User Datagram Protocol¼´ÓÃ»§Êý¾Ý±¨Ð­Òé£©ÊÇÒ»¸öÇáÁ¿¼¶µÄ£¬²»¿É¿¿µÄ£¬ÃæÏòÊý¾Ý±
 Á÷³Ì£º¢Ù´´½¨QUdpSocketÌ×½Ó×Ö¶ÔÏó ¢ÚÈç¹ûÐèÒª½ÓÊÕÊý¾Ý£¬±ØÐë°ó¶¨¶Ë¿Ú ¢Û·¢ËÍÊý¾ÝÓÃwriteDatagram£¬½ÓÊÕÊý¾ÝÓÃ readDatagram ¡£
 
 
-#### 12£º¶ÔQGraphicsViewÁË½â°É£¿
+#### 10£º¶ÔQGraphicsViewÁË½â°É£¿
 
-#### 13¡¢ÃèÊöQTÖÐµÄÎÄ¼þÁ÷(QTextStream)ºÍÊý¾ÝÁ÷(QDataStream)µÄÇø±ð
+#### 11¡¢ÃèÊöQTÖÐµÄÎÄ¼þÁ÷(QTextStream)ºÍÊý¾ÝÁ÷(QDataStream)µÄÇø±ð
        
 ÎÄ¼þÁ÷(QTextStream)¡£²Ù×÷ÇáÁ¿¼¶Êý¾Ý£¨int,double,QString£©Êý¾ÝÐ´ÈëÎÄ±¾¼þÖÐÒÔºóÒÔÎÄ±¾µÄ·½Ê½³ÊÏÖ¡£
 
@@ -251,7 +206,7 @@ UDP£¨User Datagram Protocol¼´ÓÃ»§Êý¾Ý±¨Ð­Òé£©ÊÇÒ»¸öÇáÁ¿¼¶µÄ£¬²»¿É¿¿µÄ£¬ÃæÏòÊý¾Ý±
 ÎÄ¼þÁ÷£¬Êý¾ÝÁ÷¶¼¿ÉÒÔ²Ù×÷´ÅÅÌÎÄ¼þ£¬Ò²¿ÉÒÔ²Ù×÷ÄÚ´æÊý¾Ý¡£Í¨¹ýÁ÷¶ÔÏó¿ÉÒÔ½«¶ÔÏó´ò°üµ½ÄÚ´æ£¬½øÐÐÊý¾ÝµÄ´«Êä¡£
 
 
-#### 14.qtÄ£ÐÍ
+#### 12.qtÄ£ÐÍ
 ´ð£ºQtÖÐµÄViewÖ÷ÒªÓÐÈýÖÖQListView£¬QTreeView, QTabelView
 ¶ø¶ÔÓ¦µÄModelÊÇ£ºQStringListModel, QAbstractItemModel , QStandardItemModel¡£
 ³éÏó ±ê×¼
@@ -265,7 +220,7 @@ Model·ñÔò±£´æÊý¾Ý£¬View¸ºÔðÕ¹Ê¾Êý¾Ý£¬Delegate¸ºÔðItemÑùÊ½»æÖÆ»ò´¦ÀíÊäÈë¡£
 Delegate¸ºÔð½«±à¼­×´Ì¬·¢ËÍ¸øModel²ã¡£»ùÀà·Ö±ðÎªQAbstractItemModel¡¢QAbstractItemView¡¢QAbstractItemDelegate¡£
 QtÖÐÌá¹©ÁËÄ¬ÈÏÊµÏÖµÄMVDÀà£¬ÈçQTableWidget¡¢QListWidget¡¢QTreeWidgetµÈ¡£
 
-### 15.²å¼þ¹ÜÀíÆ÷
+### 13.²å¼þ¹ÜÀíÆ÷
 https://blog.csdn.net/kenfan1647/category_9967854.html
 
 ### 16.²å¼þÖ®¼äÍ¨ÐÅ
