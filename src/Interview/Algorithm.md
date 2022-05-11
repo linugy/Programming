@@ -339,3 +339,73 @@ https://blog.csdn.net/weixin_42205987/article/details/82011724
 #### 9.十进制字符串转十六进制字符串
 
 
+
+### 5.实现strcpy函数
+https://blog.csdn.net/hhhuang1991/article/details/79955057
+```
+char *strcpy(char *str1, const char *str2)
+{
+    if (str1 == NULL || str2 == NULL) {
+        return NULL;
+    }
+
+    while (*str2 != '\0') {
+        *str1 = *str2;
+        str1++;
+        str2++;
+    }
+    str1 = '\0';
+    return str1;
+}
+```
+
+### 6.实现strcmp函数
+https://blog.csdn.net/wgenek/article/details/7257435
+https://www.cnblogs.com/litifeng/p/7465173.html
+```
+int strcmp(const char *str1, const char *str2)
+{
+    while ((*str1) && *str1 == *str2) {
+        str1++;
+        str2++;
+    }
+
+    if (*str1 > *str2) {
+        return 1;
+    } else if (*str1 < *str2) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+```
+
+### 7.实现memcpy函数
+https://www.cnblogs.com/chuanfengzhang/p/8447251.html
+https://blog.csdn.net/goodwillyang/article/details/45559925
+https://www.cnblogs.com/liangyc/p/11628723.html
+
+```
+void *memcpy(void *dest, const void *src, int n)
+{
+    if (dest == NULL || src == NULL || n <= 0) {
+        return NULL;
+    }
+
+    char *pDest = (char *)dest;
+    char *pSrc = (char *)src;
+
+    if (pDest > pSrc && pDest < pSrc + n) {
+        pDest = pDest + n - 1;
+        pSrc = pSrc + n - 1;
+        while (n--) {
+            *pDest-- = *pSrc--;
+        }
+    } else {
+        while (n--) {
+            *pDest++ = *pSrc++;
+        }
+    }
+    return dest;
+}
+```

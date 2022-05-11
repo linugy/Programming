@@ -48,86 +48,10 @@
 
 
 
-4.实现strcpy
-5.实现strcmp
-6.实现memcpy
 8.堆栈溢出原因
 13.C++智能指针
 10.指针和引用的区别
 12.变量的声明和定义有什么区别
-
-
-
-### 5.实现strcpy函数
-https://blog.csdn.net/hhhuang1991/article/details/79955057
-```
-char *strcpy(char *str1, const char *str2)
-{
-    if (str1 == NULL || str2 == NULL) {
-        return NULL;
-    }
-
-    while (*str2 != '\0') {
-        *str1 = *str2;
-        str1++;
-        str2++;
-    }
-    str1 = '\0';
-    return str1;
-}
-```
-
-### 6.实现strcmp函数
-https://blog.csdn.net/wgenek/article/details/7257435
-https://www.cnblogs.com/litifeng/p/7465173.html
-```
-int strcmp(const char *str1, const char *str2)
-{
-    while ((*str1) && *str1 == *str2) {
-        str1++;
-        str2++;
-    }
-
-    if (*str1 > *str2) {
-        return 1;
-    } else if (*str1 < *str2) {
-        return -1;
-    } else {
-        return 0;
-    }
-}
-```
-
-### 7.实现memcpy函数
-https://www.cnblogs.com/chuanfengzhang/p/8447251.html
-https://blog.csdn.net/goodwillyang/article/details/45559925
-https://www.cnblogs.com/liangyc/p/11628723.html
-
-```
-void *memcpy(void *dest, const void *src, int n)
-{
-    if (dest == NULL || src == NULL || n <= 0) {
-        return NULL;
-    }
-
-    char *pDest = (char *)dest;
-    char *pSrc = (char *)src;
-
-    if (pDest > pSrc && pDest < pSrc + n) {
-        pDest = pDest + n - 1;
-        pSrc = pSrc + n - 1;
-        while (n--) {
-            *pDest-- = *pSrc--;
-        }
-    } else {
-        while (n--) {
-            *pDest++ = *pSrc++;
-        }
-    }
-    return dest;
-}
-```
-
 
 
 ### 8.堆栈溢出原因
@@ -326,3 +250,27 @@ vector 如何处理数据
 new 和 malloc 的区别
 
 函数未定义时会怎么样？
+
+什么情况下，delete需要加一个中括号[]
+
+new malloc区别?
+
+int占多少个字节，long long，long，这几个一定是占这么多空间吗?
+
+纯虚函数和普通的虚函数有什么区别
+
+虚继承的作用
+
+class前项申明和include的区别
+
+如何排查出代码里已经存在的内存泄漏问题
+
+ shared_ptr内部的引用计数，怎么实现的?
+
+dynamic_cast怎么保证安全的？
+
+静态扫描和动态检测.C++内存的运行时的动态检测，要怎么做.静态扫描检测，的具体方法
+
+如果有一块内存，如何知道内存是被人正在使用的，还是忘记delete导致内存泄漏的?
+
+堆内存分配的时候，需要找寻足够大的内存，如果没有足够大的内存怎么办

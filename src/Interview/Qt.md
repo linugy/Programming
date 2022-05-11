@@ -1,4 +1,42 @@
+## Ä¿Â¼
+### Ôª¶ÔÏóÏµÍ³
+#### QObject
+#### qmake
+### ÐÅºÅ²Û
+#### ÐÅºÅ²ÛÔ­Àí
+#### ÐÅºÅ²ÛÓÅÈ±µã
+#### ÐÅºÅ²ÛÓÃ·¨
+#### ÐÅºÅ²ÛµÚÎå¸ö²ÎÊý
+### ¶àÏß³Ì
+#### ¶àÏß³Ì²ÛÓÃ·¨
+#### ¶àÏß³ÌÍ¬²½
+### ÐÅºÅ²ÛºÍ¶àÏß³Ì
+### ÊÂ¼þ´«µÝ
+### QtÏÂTCPÍ¨ÐÅ¹ý³Ì
+### QtÏÂUDPÍ¨ÐÅ¹ý³Ì
+### QSS
+### ¹ú¼Ê»¯
+### QtÖÐÉè¼ÆÄ£Ê½
+### ²å¼þ¹ÜÀíÆ÷
+### MVD
+### QGraphicsView
+### QTÖÐµÄÎÄ¼þÁ÷(QTextStream)ºÍÊý¾ÝÁ÷(QDataStream)
+### qÖ¸ÕëºÍdÖ¸Õë
+### QtÖÇÄÜÖ¸Õë
+#### ÓëC++ÖÇÄÜÖ¸ÕëµÄÇø±ð
+### ÆäËû
+#### ÈçºÎ±£Ö¤Ö»´ò¿ªÒ»¸öexe
+#### QStringºÍstringµÄÇø±ð
+#### show() exec()Çø±ð
+#### ÓÃQTÊµÏÖÒ»¸öÈý½ÇÐÎµÄ°´Å¥£¬»áÈçºÎÊµÏÖ?
+
+ £¨Ð´¸öÀý×Ó£©     
+
+
 #### 1.¶àÏß³Ì
+2.QtÖÐ£¬ËµÒ»ÏÂ´´½¨Ïß³Ì·½Ê½
+1.QtÌá¹©ÁË¼¸ÖÖÍ¬²½·½Ê½
+¶àÏß³Ì£¨´´½¨Ïß³ÌµÄ2ÖÖ·½Ê½£¬Ïß³ÌÍ¬²½µÄ5ÖÖ·½Ê½£¬·ÀÖ¹½çÃæ¶³½áµÄ2ÖÖ·½Ê½£©
 ##### £¨1£©£º¢Ù´´½¨Ò»¸öÀà´ÓQThreadÀàÅÉÉú¢ÚÔÚ×ÓÏß³ÌÀàÖÐÖØÐ´ run º¯Êý, ½«´¦Àí²Ù×÷Ð´Èë¸Ãº¯ÊýÖÐ ¢ÛÔÚÖ÷Ïß³ÌÖÐ´´½¨×ÓÏß³Ì¶ÔÏó, Æô¶¯×ÓÏß³Ì, µ÷ÓÃstart()º¯Êý
 ÓÅµã£ºÊµÏÖ¼òµ¥£¬¿ÉÒÔÓÃÐÅºÅ²ÛÍ¨ÐÅ¡£
 È±µã£ºÐèÒª×Ô¼º¹ÜÀíÏß³ÌµÄ´´½¨ÊÍ·Å£¬Æµ·±µØ´´½¨ÊÍ·ÅÐ§ÂÊ²»¸ß¡£ËùÒÔÊÊºÏ³£×¤³ÌÐòµÄÏß³ÌÊ¹ÓÃ¡£ÁíÍâÒòÎªQThread¶ÔÏóÊôÓÚ¸¸Ïß³Ì£¬ËùÒÔ¶ÔÏóÖÐµÄ²Ûº¯Êý£¨Èç¹ûÓÐµÄ»°£©ÆäÊµ»áÔÚ¸¸Ïß³ÌÖ´ÐÐ¡£
@@ -17,6 +55,16 @@
 ##### ¶àÏß³ÌÊ¹ÓÃ×¢ÒâÊÂÏî:£¨1£©ÒµÎñ¶ÔÏó, ¹¹ÔìµÄÊ±ºò²»ÄÜÖ¸¶¨¸¸¶ÔÏó£»£¨2£©×ÓÏß³ÌÖÐÖ»ÄÜ´¦ÀíÒ»Ð©Êý¾ÝÏà¹ØµÄ²Ù×÷, ²»ÄÜÉæ¼°ui´°¿Ú(uiÏà¹ØµÄÀà)
 
 #### 2.ÐÅºÅºÍ²Û
+6.ÐÅºÅ²ÛµÚÎå¸ö²ÎÊý£º
+5.ÐÅºÅ²ÛÁ¬½ÓÓÐ¼¸ÖÖ·½Ê½£¿Ö±½ÓÁ¬½ÓÊÇÔõÃ´Ö´ÐÐµÄ£¿
+14.ÐÅºÅ²ÛµÄÊµÏÖÔ­Àí
+16.ÐÅºÅÓë²ÛÓëº¯ÊýÖ¸ÕëµÄ±È½Ï
+ÔõÃ´×Ô¼ºÊµÏÖ Qt µÄÐÅºÅÓë²Û£¿
+ÐÅºÅÓë²Û¡¢ºÍÊÂ¼þµÄÇø±ð
+×Ô¶¨Òå½á¹¹Ìåµ½ÐÅºÅÓë²ÛÒª×¢ÒâÊ²Ã´
+ÐÅºÅÓë²ÛµÄµ×²ãÔ­Àí£»ÐÅºÅÓë²ÛÔõÃ´×öµ½ÐÔÄÜÓÅ»¯
+https://zhuanlan.zhihu.com/p/75126932
+https://blog.csdn.net/weixin_43327696/article/details/105819597
 »Øµ÷º¯Êý¡£ÐÅºÅ»òÊÇ´«µÝÖµ£¬»òÊÇ´«µÝ¶¯×÷±ä»¯£»²Ûº¯ÊýÏìÓ¦ÐÅºÅ»òÊÇ½ÓÊÕÖµ£¬»òÕß¸ù¾Ý¶¯×÷±ä»¯À´×ö³ö¶ÔÓ¦²Ù×÷¡£
 
 #### 2.qtÐÅºÅ²ÛÊÇÊ²Ã´£¿
@@ -98,6 +146,10 @@ connect(this,&mainwindow::my_signal,this,[=]{qDebug()<<100;});
 ×èÈû¶ÓÁÐ(¿çÏß³Ì,¶àÏß³Ì)
 Î¨Ò»Á¬½Ó(¿çÏß³Ì,¶àÏß³Ì)
 
+
+
+
+
 #### 3¡¢¶àÏß³ÌÓëÐÅºÅ²Û
         
 ¿ÉÒÔÍ¨¹ýconnectµÄµÚÎå¸ö²ÎÊý½øÐÐ¿ØÖÆÐÅºÅ²ÛÖ´ÐÐÊ±ËùÔÚµÄÏß³Ì
@@ -129,6 +181,9 @@ connectÓÐ¼¸ÖÖÁ¬½Ó·½Ê½£¬Ö±½ÓÁ¬½ÓºÍ¶ÓÁÐÁ¬½Ó¡¢×Ô¶¯Á¬½Ó
 
 
 #### 5.ÊÂ¼þ´«µÝ
+15.qt µÄÏûÏ¢´«µÝ»úÖÆ
+17.QtµÄÊÂ¼þ¹ýÂËÆ÷ £¨ÊÂ¼þµÄ´«µÝÊÇÓÉ×ÓÀàÍù¸¸ÀàÉÏ´«µÄ£©
+ÊÂ¼þÏµÍ³£¨×Ô¶¨ÒåÊÂ¼þ´¦Àíº¯Êý3ÖÖ·½Ê½£©
 https://www.cnblogs.com/xiaobingqianrui/p/9547924.html
 
 #### 6.ÊÂ¼þÑ­»·
@@ -144,6 +199,8 @@ dÔÚ¸¸Àà»ñÈ¡×ÓÀàË½ÓÐ³ÉÔ±Ö¸Õë
 
 
 #### 8¡¢ÃèÊöQTµÄTCPÍ¨Ñ¶Á÷³Ì
+7.QtÏÂTCPÍ¨ÐÅ¹ý³Ì
+8.QtÏÂUDPÍ¨ÐÅ¹ý³Ì
 ·þÎñ¶Ë£º£¨QTcpServer£©
         ¢Ù´´½¨QTcpServer¶ÔÏó
 
@@ -195,6 +252,8 @@ UDP£¨User Datagram Protocol¼´ÓÃ»§Êý¾Ý±¨Ð­Òé£©ÊÇÒ»¸öÇáÁ¿¼¶µÄ£¬²»¿É¿¿µÄ£¬ÃæÏòÊý¾Ý±
 
 #### 10£º¶ÔQGraphicsViewÁË½â°É£¿
 
+
+
 #### 11¡¢ÃèÊöQTÖÐµÄÎÄ¼þÁ÷(QTextStream)ºÍÊý¾ÝÁ÷(QDataStream)µÄÇø±ð
        
 ÎÄ¼þÁ÷(QTextStream)¡£²Ù×÷ÇáÁ¿¼¶Êý¾Ý£¨int,double,QString£©Êý¾ÝÐ´ÈëÎÄ±¾¼þÖÐÒÔºóÒÔÎÄ±¾µÄ·½Ê½³ÊÏÖ¡£
@@ -226,40 +285,42 @@ https://blog.csdn.net/kenfan1647/category_9967854.html
 ### 16.²å¼þÖ®¼äÍ¨ÐÅ
 https://blog.csdn.net/kenfan1647/category_9967854.html
 
-### 17¡¢Qt
-1.Ôª¶ÔÏóÏµÍ³£¨Ôª¶ÔÏóÏµÍ³Ìá¹©£©
-2.ÐÅºÅ²Û£¨ÐÅºÅ²ÛÁ¬½ÓµÄ3ÖÖ·½Ê½£¬µÚÎå¸ö²ÎÊý£¬ÐÅºÅ²ÛºÍÏß³ÌÒ»ÆðÊ¹ÓÃ£©
-3.¶àÏß³Ì£¨´´½¨Ïß³ÌµÄ2ÖÖ·½Ê½£¬Ïß³ÌÍ¬²½µÄ5ÖÖ·½Ê½£¬·ÀÖ¹½çÃæ¶³½áµÄ2ÖÖ·½Ê½£©
-4.ÊÂ¼þÏµÍ³£¨×Ô¶¨ÒåÊÂ¼þ´¦Àíº¯Êý3ÖÖ·½Ê½£©
-5.QSS
-6.qmake
-7.QtÏÂTCPÍ¨ÐÅ¹ý³Ì
-8.QtÏÂUDPÍ¨ÐÅ¹ý³Ì
-9.¹ú¼Ê»¯
-5.ÐÅºÅ²ÛÁ¬½ÓÓÐ¼¸ÖÖ·½Ê½£¿Ö±½ÓÁ¬½ÓÊÇÔõÃ´Ö´ÐÐµÄ£¿
-2.QtÖÐ£¬ËµÒ»ÏÂ´´½¨Ïß³Ì·½Ê½
-6.ÐÅºÅ²ÛµÚÎå¸ö²ÎÊý£º
-7. qtÖÐQObjectÀàÊÇ×öÊ²Ã´µÄ£¬ÓÐÄÄÐ©¹¦ÄÜ?
 8.https://blog.csdn.net/xpg4321/article/details/101278293
-1.³ÌÐò´ò°üËµÒ»ÏÂ¡£
-1.qtÖÐ¶¼ÓÃµ½ÁËÄÄÐ©Éè¼ÆÄ£Ê½
-1.QtÌá¹©ÁË¼¸ÖÖÍ¬²½·½Ê½
-14.ÐÅºÅ²ÛµÄÊµÏÖÔ­Àí
-15.qt µÄÏûÏ¢´«µÝ»úÖÆ
-16.ÐÅºÅÓë²ÛÓëº¯ÊýÖ¸ÕëµÄ±È½Ï
-17.QtµÄÊÂ¼þ¹ýÂËÆ÷ £¨ÊÂ¼þµÄ´«µÝÊÇÓÉ×ÓÀàÍù¸¸ÀàÉÏ´«µÄ£©
-18.ÎªÊ²Ã´ new QWidget ²»ÐèÒª delete
-19.Qt µÄ TableWidget ºÍ Table View µÄÇø±ð
-Qt ×Ô¶¨Òå¿Ø¼þ·½·¨
-Qt ¶à¹úÓïÑÔ
-QSS Ö÷ÌâÑùÊ½
-ÐÅºÅÓë²Û¡¢ºÍÊÂ¼þµÄÇø±ð
-×Ô¶¨Òå½á¹¹Ìåµ½ÐÅºÅÓë²ÛÒª×¢ÒâÊ²Ã´
-ÐÅºÅÓë²ÛµÄµ×²ãÔ­Àí£»ÐÅºÅÓë²ÛÔõÃ´×öµ½ÐÔÄÜÓÅ»¯
-ÓÃ¹ý Qt µÄÊ²Ã´Ä£¿é
-ÔõÃ´×Ô¼ºÊµÏÖ Qt µÄÐÅºÅÓë²Û£¿
-Êý¾Ý¿âÎªºÎÓÃ SQLite
 
+
+1.qtÖÐ¶¼ÓÃµ½ÁËÄÄÐ©Éè¼ÆÄ£Ê½
+1.µ¥ÀýÄ£Ê½£ºqApp
+2.¹Û²ìÕßÄ£Ê½£ºÐÅºÅ²Û
+
+18.ÎªÊ²Ã´ new QWidget ²»ÐèÒª delete
+https://zhuanlan.zhihu.com/p/476682300
+http://shouce.jb51.net/qt-beginning/48.html
+
+#### show() exec()Çø±ð
+Ä£Ê½´°¿Ú£º´°¿Ú»áÔ­µØ×èÈû£¬Ö»ÄÜ²Ù×÷¸Ã´°¿Ú£¬ÆäÓà´°¿Ú²»ÄÜÔÙ²Ù×÷£»Ö»ÓÐ¹Ø±Õ¸Ã´°¿Úºó£¬´úÂë´¦²Å»á»ñµÃ·µ»ØÖµ£¬×èÈûÍ£Ö¹£¬¾Í¿ÉÒÔ²Ù×÷ÆäËü½çÃæÁË£»
+
+°ëÄ£Ê½´°¿Ú£º´°¿Ú»áÔ­µØÎ±×èÈû£¬ËäÈ»Ò²ÊÇÖ»ÄÜ²Ù×÷¸Ã´°¿Ú£¬ÆäÓà´°¿Ú²»ÄÜÔÙ²Ù×÷£¬µ«ÊÇ´úÂë»á¼ÌÐøÍùÏÂÔËÐÐ£¬ËùÒÔËµÊÇÎ±×èÈû£»
+
+·ÇÄ£Ê½´°¿Ú£º´°¿Ú²»»á×èÈû£¬¿ÉÒÔËæÒâ²Ù×÷£»
+
+Ä£Ê½´°¿Ú£ºDlg->exec();
+°ëÄ£Ê½´°¿Ú£º Dlg->setModal(true); Dlg->show();
+·ÇÄ£Ê½´°¿Ú£ºDlg->show();
+
+
+#### ÈçºÎ±£Ö¤Ö»´ò¿ªÒ»¸öexe£¨Ê¹ÓÃ ÏµÍ³ÐÅºÅÁ¿ QSystemSemaphore Óë ¹²ÏíÄÚ´æ QSharedMemory£©
+    QSystemSemaphore sema("JAMKey",1,QSystemSemaphore::Open);
+    sema.acquire();//ÔÚÁÙ½çÇø²Ù×÷¹²ÏíÄÚ´æ  SharedMemory
+    QSharedMemory mem("SystemObject");//È«¾Ö¶ÔÏóÃû
+    if (!mem.create(1))//Èç¹ûÈ«¾Ö¶ÔÏóÒÔ´æÔÚÔòÍË³ö
+    {
+        sema.release();//Èç¹ûÊÇUnixÏµÍ³£¬»á×Ô¶¯ÊÍ·Å¡£
+        return 0;
+    }
+    sema.release();//ÁÙ½çÇø
+
+#### QStringºÍstringµÄÇø±ð
+https://blog.csdn.net/qq_32733991/article/details/83748904
 
 #### 1.Çë½éÉÜÏÂ qtÖÐQObjectÀàÊÇ×öÊ²Ã´µÄ£¬ÓÐÄÄÐ©¹¦ÄÜ?
 ºÜ¶àÈËÖ»ÖªµÀºÍÐÅºÅ²Û»úÖÆÓÐ¹ØÏµ
