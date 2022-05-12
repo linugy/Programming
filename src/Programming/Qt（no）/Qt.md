@@ -1,4 +1,4 @@
-### 1.元对象系统
+﻿### 1.元对象系统
 #### 元对象系统提供
 （1）信号槽机制（最重要的特性）
 （2）动态属性系统
@@ -662,3 +662,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(worker, &MyThread::destroyed, thread, &QThread::deleteLater);
 }
 ```
+
+
+### 13.插件管理器
+https://blog.csdn.net/kenfan1647/category_9967854.html
+
+### 16.插件之间通信
+https://blog.csdn.net/kenfan1647/category_9967854.html
