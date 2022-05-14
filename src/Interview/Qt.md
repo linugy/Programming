@@ -26,97 +26,65 @@
    
 //================================================================================================================
 
-1.qt中QObject类是做什么的，有哪些功能?
+#### 1.qt中QObject类是做什么的，有哪些功能?
 QObject是Qt实现元对象系统的基础，元对象系统是...
 
-2.了解元对象系统吗？
+#### 2.了解元对象系统吗？
 元对象系统是Qt对标准的C++进行的扩展，提供了（1）信号槽机制（2）动态属性系统（3）运行时类型识别 （4）对象树 等功能，
 为了使用原对象系统，需要（1）QObject类：作为使用元对象类的基类（2）Q_OBJECT宏：用于启动元对象系统（3）MOC（Meta-Object Compiler，元对象编译器）：为每个QObject子类提供必要的代码
 moc工作流程：读取源文件检测到类中包含有Q_OBJECT宏时，则会创建一个moc开头的C++源文件，其中包含了类的元对象代码。这些产生的源文件包含进类的源文件中，一起进行编译。
 
-2.1 信号槽机制(后面详细讲)
+##### 2.1 信号槽机制(后面详细讲)
 
-2.2 动态属性系统
+##### 2.2 动态属性系统
 QObject::setProperty()和QObject::property()通过名字来动态设置或者获取对象属性；
 
-2.3 运行时类型识别
+##### 2.3 运行时类型识别
 RTTI （Runtime Type Information，运行时类型信息），它提供了运行时确定对象类型的方法,
 程序能够使用基类的指针或引用来检查着这些指针或引用所指的对象的实际派生类型。
 
 QObject::metaObject()函数可以返回一个类的元对象，它是QMetaObject类的对象；
 QMetaObject::className()可以在运行时以字符串形式返回类名，而不需要C++编辑器原生的运行时类型信息（RTTI）的支持；
 
-2.4 对象树
+##### 2.4 对象树
 Qt中使用对象树（object tree）来管理所有的QObject类及其子类的对象。当创建一个QObject时，如果使用了其他的对象作为其父对象（parent），
 那么这个QObject就会被添加到父对象的children()列表中，这样当父对象被销毁时，这个QObject也会被销毁。
 
-2.5 Qt运行时类型识别 和 C++运行时类型信息
+##### 2.5 Qt运行时类型识别 和 C++运行时类型信息
 https://blog.csdn.net/songsong2017/article/details/103604885
 
-2.6 qobject_cast 和 C++的cast
+##### 2.6 qobject_cast 和 C++的cast
 使用qobject_cast()函数来对QObject类进行动态类型转换，这个函数的功能类似于标准C++中的dynamic_cast()函数，但它不再需要RTTI的支持。
 
-3.qmake,make,makefile
+#### 3.qmake,make,makefile
 https://blog.csdn.net/lvdepeng123/article/details/79007988
 
 //================================================================================================================
 
-1.信号槽原理
-https://blog.csdn.net/weixin_43327696/article/details/105819597
-https://zhuanlan.zhihu.com/p/75126932
-信号槽的实现原理
-答:信号槽实际就是观察者模式,当某个事件发生之后,它就会发出一个信号(signal),
-这个信号类似广播, 想要处理的信号和自己的一个函数(槽函数(slot))绑定处理这个信号
-当信号发出时,被链接的槽函数会自动被回调;
-信号和槽是qt特有的信息传回机制,是QT设计程序的重要基础,它可以让互不相干扰的对象建立一种联系;
-槽本质是类的成员函数,其参数可以是任意类型。
-和函数唯一区别是：槽可以与信号连接在一起,每当和槽连接的信号被发射的时候,就会调用这个槽。
+#### 1.信号槽原理
+信号槽实际就是观察者模式
 
-1.1 信号与槽、和事件的区别
-1.2 自定义结构体到信号与槽要注意什么
-1.3 怎么自己实现 Qt 的信号与槽？
-1.4 信号与槽的底层原理；信号与槽怎么做到性能优化
+##### 1.1 信号与槽、和事件的区别
+##### 1.2 自定义结构体到信号与槽要注意什么
+##### 1.3 怎么自己实现 Qt 的信号与槽？
+##### 1.4 信号与槽的底层原理；信号与槽怎么做到性能优化
+##### 1.5 Qt使用信号槽传递大量数据的效率问题，隐式共享
 
-2.信号槽优缺点
+#### 2.信号槽优缺点
 优点：
-①类型安全。需要关联的信号槽的签名必须是等同的。
-即信号的参数类型和参数个数同接受该信号的槽的参数类型和参数个数相同。若信号和槽签名不一致，编译器会报错。
-
-          
-②松散耦合。信号和槽机制减弱了Qt对象的耦合度。激发信号的Qt对象无需知道是那个对象的那个信号槽接收它发出的信号，
-它只需在适当的时间发送适当的信号即可，而不需要关心是否被接受和那个对象接受了。
-Qt就保证了适当的槽得到了调用，即使关联的对象在运行时被删除。程序也不会奔溃。
-
-         
-③灵活性。一个信号可以关联多个槽，或多个信号关联同一个槽。
-
-
-不足：速度较慢。与回调函数相比，信号和槽机制运行速度比直接调用非虚函数慢10倍。
-
-       
- 原因：①需要定位接收信号的对象。②安全地遍历所有关联槽。③编组、解组传递参数。④多线程的时候，信号需要排队等待。
-（然而，与创建对象的new操作及删除对象的delete操作相比，信号和槽的运行代价只是他们很少的一部分。
-信号和槽机制导致的这点性能损耗，对实时应用程序是可以忽略的。）
-
-#### 3.信号槽优缺点
-优点：
-（1）低耦合：发送方不用管接收方是谁，只需要发送信号即可。同理，接收方也不用知道发送方是谁，只要信号到了就可以执行槽函数。
-（2）类型安全：信号的参数类型和个数与接收方的一致。
+1.类型安全。信号的参数类型和个数与接收方的一致。
+2.耦合度低。发送方不用管接收方是谁，只需要发送信号即可。同理，接收方也不用知道发送方是谁，只要信号到了就可以执行槽函数。
+3.使用自由。一个信号连接多个槽，一个槽连接多个信号。信号可以连接信号（此时会立即发射第二个信号）
 缺点：
-（1）效率低：需要找接受信号的对象。
-
-优缺点：
-a QT信号槽机制的引用精简了程序员的代码量;
-b QT的信号可以对应多个槽（但他们的调用顺序是随机），也可以多个槽映射一个信号;
-c QT的信号槽的建立和解除绑定十分自由;
-d信号槽同真正的回调函数比起来时间的耗损还是很大的，所有在嵌入式实时系统中应当慎用;
-e信号槽的参数限定很多例如不能携带模板类参数，不能出现宏定义等等;
+1.速度较慢。与回调函数相比，信号和槽机制运行速度比直接调用非虚函数慢10倍。
+原因：1.需要定位接收信号的对象。2.安全地遍历所有关联槽。3.编组、解组传递参数。4.多线程的时候，信号需要排队等待。
+（然而，与创建对象的new操作及删除对象的delete操作相比，信号和槽的运行代价只是他们很少的一部分。信号和槽机制导致的这点性能损耗，对实时应用程序是可以忽略的。）
 
 
-2.1信号与槽与函数指针的比较
+#### 2.1.信号与槽与函数指针的比较
 
 
-3.信号槽用法
+#### 3.信号槽用法
 连接方式：
 （1）使用SIGNAL和SLOT宏，此时信号的参数不能比槽的参数少，举例：
 ```
@@ -124,75 +92,618 @@ e信号槽的参数限定很多例如不能携带模板类参数，不能出现宏定义等等;
   connect(sender, SIGNAL(destroyed(QObject*)), this, SLOT(objectDestroyed()));
   connect(sender, SIGNAL(destroyed()), this, SLOT(objectDestroyed()));
 ```
+
 （2）使用函数指针：
 connect(sender, &QObject::destroyed, this, &MyObject::objectDestroyed);
+
 （3）使用lambda：
 connect(sender, &QObject::destroyed, [=](){ this->m_objects.remove(sender); });
 
-3.1 lambda
+##### 3.1 lambda
 lambda表达式主要分五部分:[函数对象参数]、(操作符重载函数参数)、mutable或 声明、->返回值类型、{函数体} [捕获列表] (参数列表) 函数选项 -> 返回值类型 {函数体}
 [&]:以引用的方式捕获外部的所有变量，如果在函数体内改变外部变量值，外部变量值就会随之改变；
-　　[=]:以值的方式捕获外部的所有变量，如果在函数体内改变“外部变量值”，外部变量值不会改变；
+[=]:以值的方式捕获外部的所有变量，如果在函数体内改变“外部变量值”，外部变量值不会改变；
 
-4.信号槽第五个参数
+#### 4.信号槽第五个参数
 
-1. Qt::AutoConnection：信号的发送者与信号的接收者在同一线程，则默认使用Qt::DirectConnection；如果不在同一线程，则默认  使用Qt::QueuedConnection。
+1. Qt::AutoConnection：信号的发送者与信号的接收者在同一线程，则默认使用Qt::DirectConnection；如果不在同一线程，则默认使用Qt::QueuedConnection。
        
- 2. Qt::DirectConnection：信号的发送者与信号的接收者在同一线程中执行，当发出信号后，会马上进入槽函数，看上去就像在信号  
+2. Qt::DirectConnection：信号的发送者与信号的接收者在同一线程中执行，当发出信号后，会马上进入槽函数，看上去就像在信号  
 发送位置调用了槽函数，在多线程下会比较危险，容易造成崩溃。
        
- 3. Qt::QueuedConnection：信号的发送者与信号的接收者不在同一线程中执行，
+3. Qt::QueuedConnection：信号的发送者与信号的接收者不在同一线程中执行，
 槽函数运行于信号的接收者线程，当发送信号后，  槽函数不会马上被调用，等待信号的接收者把当前函数执行完，进入事件循环之后，槽函数才会被调用。
 多线程环境下一般用这个。
-        4. Qt::BlockingQueuedConnection：槽函数的调用时机与Qt::QueuedConnection一致，
+
+4. Qt::BlockingQueuedConnection：槽函数的调用时机与Qt::QueuedConnection一致，
 不过发送完信号后发送者所在线程会阻塞，直到槽函数运行完。接收者和发送者绝对不能在一个线程，否则程序会死锁。在多线程间需要同步的场合可能需要这个。
         
 5. Qt::UniqueConnection：可以通过按位或（|）与以上四个结合在一起使用。当设置此参数时，当某个信号和槽已经连接时，再进行重复的连接就会失败，
 也就是避免了重复连接。
 
 
-
 //================================================================================================================
 
-1.多线程用法
-
-1.Qt提供了几种同步方式
-多线程（创建线程的2种方式，线程同步的5种方式，防止界面冻结的2种方式）
-##### （1）：①创建一个类从QThread类派生②在子线程类中重写 run 函数, 将处理操作写入该函数中 ③在主线程中创建子线程对象, 启动子线程, 调用start()函数
+#### 1.多线程用法
+##### 方法1：1.创建一个类从QThread类派生;2.在子线程类中重写 run 函数, 将处理操作写入该函数中 3.在主线程中创建子线程对象, 启动子线程, 调用start()函数
 优点：实现简单，可以用信号槽通信。
 缺点：需要自己管理线程的创建释放，频繁地创建释放效率不高。所以适合常驻程序的线程使用。另外因为QThread对象属于父线程，所以对象中的槽函数（如果有的话）其实会在父线程执行。
         
-##### （2）：①将业务处理抽象成一个业务类, 在该类中创建一个业务处理函数②在主线程中创建一QThread类对象 ③在主线程中创建一个业务类对象 ④将业务类对象移动到子线程中 
-⑤在主线程中启动子线程 ⑥通过信号槽的方式, 执行业务类中的业务处理函数
+##### 方法2：1.将业务处理抽象成一个业务类, 在该类中创建一个业务处理函数;2.在主线程中创建一QThread类对象;3.在主线程中创建一个业务类对象;4.将业务类对象移动到子线程中;5.在主线程中启动子线程;6.通过信号槽的方式, 执行业务类中的业务处理函数
 优点：实现简单，使用于比较复杂的业务场景。
 缺点：只能通过信号槽的方式调用业务对象的接口。且不能给此对象指定父对象。
 
-##### （3）QThreadPool与QRunnable，继承QRunnable实现run方法完成业务类创建，由QThreadPool启动业务类。
+##### 方法3：QThreadPool与QRunnable，继承QRunnable实现run方法完成业务类创建，由QThreadPool启动业务类。
 优点：无需关注线程资源管理，不会频繁创建与释放线程。所以适用需要频繁创建销毁线程的业务场景。
         
-##### （4）QtConcurrent::run()直接将任务丢进子线程执行。
+##### 方法4：QtConcurrent::run()直接将任务丢进子线程执行。
 优点：调用简单，无需关注线程资源管理，不会频繁创建与释放线程。
 
 ##### 多线程使用注意事项:（1）业务对象, 构造的时候不能指定父对象；（2）子线程中只能处理一些数据相关的操作, 不能涉及ui窗口(ui相关的类)
 
+#### moveToThread
+（1）对象移动到线程时不能有parent
+（2）将对象移动到当前线程：
+```
+  myObject->moveToThread(QApplication::instance()->thread());
+```
 
-2.多线程同步
+#### QThread
+#### 使用moveToTHread
+举例：
+```
+// 工作线程类，继承自QObject
+class Worker : public QObject
+  {
+      Q_OBJECT
+      
+  public slots:
+      void doWork(const QString &parameter) {
+          QString result;
+          // 执行耗时操作
+          emit resultReady(result);// 发送完成信号
+      }
 
-3.防止界面冻结的方法：
+  signals:
+      void resultReady(const QString &result);
+  };
+
+// ====================================================
+// 主类
+  class Controller : public QObject
+  {
+      Q_OBJECT
+      // 创建一个private的成员变量
+      QThread workerThread;
+  public:
+      Controller() {
+      	  // 创建工作线程，然后移动到线程中
+          Worker *worker = new Worker;
+          worker->moveToThread(&workerThread);
+          
+          // 销毁thread
+          connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
+          
+          // 调用线程，此时dowork函数在次线程执行
+          connect(this, &Controller::operate, worker, &Worker::doWork);
+          
+          // 当线程执行完，将结果返回
+          connect(worker, &Worker::resultReady, this, &Controller::handleResults);
+          
+          // 手动调用开启线程
+          workerThread.start();
+      }
+      ~Controller() {
+      	  // 析构时退出线程 
+          workerThread.quit();
+          workerThread.wait();
+      }
+  public slots:
+      void handleResults(const QString &);
+  signals:
+      void operate(const QString &);
+  };
+```
+
+#### 继承QThread，重新实现run函数
+不建议使用，此时只有run函数是在次线程，而槽函数都在主线程。
+举例：
+```
+  class WorkerThread : public QThread
+  {
+      Q_OBJECT
+      void run() Q_DECL_OVERRIDE {
+          QString result;
+          // 耗时操作
+          emit resultReady(result);
+      }
+  signals:
+      void resultReady(const QString &s);
+  };
+
+//==============================================
+
+  void MyObject::startWorkInAThread()
+  {
+      WorkerThread *workerThread = new WorkerThread(this);
+      connect(workerThread, &WorkerThread::resultReady, this, &MyObject::handleResults);
+      connect(workerThread, &WorkerThread::finished, workerThread, &QObject::deleteLater);
+      workerThread->start();
+  }
+```
+
+#### 2.多线程同步
+##### QMutex
+举例：
+```
+  QMutex mutex;
+  int number = 6;
+
+  void method1()
+  {
+      mutex.lock();
+      number *= 5;
+      number /= 4;
+      mutex.unlock();
+  }
+
+  void method2()
+  {
+      mutex.lock();
+      number *= 3;
+      number /= 2;
+      mutex.unlock();
+  }
+```
+##### QMutexLocker
+简化了加锁和释放锁的步骤，当QMutexLocker销毁时，即可自动释放锁。
+举例：
+```
+  int complexFunction(int flag)
+  {
+      // 函数结束时，自动释放锁
+      QMutexLocker locker(&mutex);
+
+      int retVal = 0;
+
+      switch (flag) {
+      case 0:
+      case 1:
+          return moreComplexFunction(flag);
+      default:
+          if (flag > 10)
+              return -1;
+          break;
+      }
+      return retVal;
+  }
+```
+##### QReadWriteLock
+举例：
+```
+  QReadWriteLock lock;
+
+  void ReaderThread::run()
+  {
+      ...
+      lock.lockForRead();
+      read_file();
+      lock.unlock();
+      ...
+  }
+
+  void WriterThread::run()
+  {
+      ...
+      lock.lockForWrite();
+      write_file();
+      lock.unlock();
+      ...
+  }
+```
+
+##### QSemaphore
+用户保护多个资源，方法acquire（n）和release（n）用于获取和释放多个资源。
+举例：
+```
+  QSemaphore sem(5);      // sem.available() == 5
+
+  sem.acquire(3);         // sem.available() == 2
+  sem.acquire(2);         // sem.available() == 0
+  sem.release(5);         // sem.available() == 5
+  sem.release(5);         // sem.available() == 10
+
+  sem.tryAcquire(1);      // sem.available() == 9, returns true
+  sem.tryAcquire(250);    // sem.available() == 9, returns false
+```
+
+
+##### QWaitCondition
+提供了条件变量用于同步线程
+举例：见综合举例2
+
+
+#### 综合举例1（Semaphores Example）
+初始变量：
+```
+const int DataSize = 100000;
+
+const int BufferSize = 8192;
+char buffer[BufferSize];
+
+QSemaphore freeBytes(BufferSize);
+QSemaphore usedBytes;
+```
+
+生产者：
+```
+class Producer : public QThread
+{
+public:
+    void run() Q_DECL_OVERRIDE
+    {
+        qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
+        for (int i = 0; i < DataSize; ++i) {
+            freeBytes.acquire();
+            buffer[i % BufferSize] = "ACGT"[(int)qrand() % 4];
+            usedBytes.release();
+        }
+    }
+};
+```
+
+消费者：
+```
+class Consumer : public QThread
+{
+    Q_OBJECT
+public:
+    void run() Q_DECL_OVERRIDE
+    {
+        for (int i = 0; i < DataSize; ++i) {
+            usedBytes.acquire();
+            fprintf(stderr, "%c", buffer[i % BufferSize]);
+            freeBytes.release();
+        }
+        fprintf(stderr, "\n");
+    }
+
+signals:
+    void stringConsumed(const QString &text);
+
+protected:
+    bool finish;
+};
+```
+
+调用：
+```
+int main(int argc, char *argv[])
+{
+    QCoreApplication app(argc, argv);
+    Producer producer;
+    Consumer consumer;
+    producer.start();
+    consumer.start();
+    producer.wait();
+    consumer.wait();
+    return 0;
+}
+```
+
+总结：
+（1）free和used和的大小始终等于缓冲器（BufferSize）的大小
+（2）生产者和消费者都是DataSize的大小进行循环，表示要生产DataSize大小和消费DataSize大小
+（3）buffer作为缓冲器，被保护起来了。
+（4）acquire表示-1，release表示+1
+（5）缓冲器没有动，总数据在变化
+
+#### 综合举例2（Wait Conditions Example）
+初始变量：
+```
+  const int DataSize = 100000;
+
+  const int BufferSize = 8192;
+  char buffer[BufferSize];
+
+  QWaitCondition bufferNotEmpty;
+  QWaitCondition bufferNotFull;
+  QMutex mutex;
+  int numUsedBytes = 0;
+```
+
+生产者：
+```
+  class Producer : public QThread
+  {
+  public:
+      Producer(QObject *parent = NULL) : QThread(parent)
+      {
+      }
+
+      void run() Q_DECL_OVERRIDE
+      {
+          qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
+
+          for (int i = 0; i < DataSize; ++i) {
+              mutex.lock();
+              if (numUsedBytes == BufferSize)
+                  bufferNotFull.wait(&mutex);
+              mutex.unlock();
+
+              buffer[i % BufferSize] = "ACGT"[(int)qrand() % 4];
+
+              mutex.lock();
+              ++numUsedBytes;
+              bufferNotEmpty.wakeAll();
+              mutex.unlock();
+          }
+      }
+  };
+```
+
+消费者：
+```
+  class Consumer : public QThread
+  {
+      Q_OBJECT
+  public:
+      Consumer(QObject *parent = NULL) : QThread(parent)
+      {
+      }
+
+      void run() Q_DECL_OVERRIDE
+      {
+          for (int i = 0; i < DataSize; ++i) {
+              mutex.lock();
+              if (numUsedBytes == 0)
+                  bufferNotEmpty.wait(&mutex);
+              mutex.unlock();
+
+              fprintf(stderr, "%c", buffer[i % BufferSize]);
+
+              mutex.lock();
+              --numUsedBytes;
+              bufferNotFull.wakeAll();
+              mutex.unlock();
+          }
+          fprintf(stderr, "\n");
+      }
+
+  signals:
+      void stringConsumed(const QString &text);
+  };
+```
+
+调用：
+```
+  int main(int argc, char *argv[])
+  {
+      QCoreApplication app(argc, argv);
+      Producer producer;
+      Consumer consumer;
+      producer.start();
+      consumer.start();
+      producer.wait();
+      consumer.wait();
+      return 0;
+  }
+```
+
+总结：
+（1）加入了不为空和不为满的判断，一旦发现缓存满了，就通知消费者；一旦发现缓存空了，就通知生产者
+
+
+#### 3.防止界面冻结的方法
+参考：https://www.cryfeifei.cn
+（1）QCoreApplication::postEvent
+（2）QtConcurrent::run
+（3）QObject::moveToThread
+
+
+### 6.释放线程资源方法：
+（1）官方文档（QThread定义在栈上）：
+```
+class Controller : public QObject
+  {
+      Q_OBJECT
+      QThread workerThread;
+  public:
+      Controller() {
+          Worker *worker = new Worker;
+          worker->moveToThread(&workerThread);
+          
+          // 2.thread销毁完成后，销毁work对象
+          connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
+          
+          connect(this, &Controller::operate, worker, &Worker::doWork);
+          connect(worker, &Worker::resultReady, this, &Controller::handleResults);
+          workerThread.start();
+      }
+      ~Controller() {
+      	  // 1.thread定义在栈上，类销毁时，thread开始销毁
+          workerThread.quit();
+          workerThread.wait();
+      }
+  };
+```
+
+（2）QTread定义在堆上：
+当工作完成后，发射信号告知线程，线程先quit和wait（此时没有销毁）。
+接着线程完成了（quit了但没有销毁），就告诉work，让他先销毁。
+work销毁后，在让线程销毁。
+```
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+{
+    thread = new QThread();
+    MyThread *worker = new MyThread();
+    worker->moveToThread(thread);
+
+    // 当工作线程工作完，让线程停止、等待
+    connect(worker, &MyThread::workFinished, [this](){
+        thread->quit();
+        thread->wait();
+    });
+
+    // 线程完成停止后，销毁worker
+    connect(thread, &QThread::finished, worker, &MyThread::deleteLater);
+
+    // worker销毁完后，在销毁thread本身
+    connect(worker, &MyThread::destroyed, thread, &QThread::deleteLater);
+}
+```
+
 
 //================================================================================================================
 
-1.信号槽和多线程
-        
-可以通过connect的第五个参数进行控制信号槽执行时所在的线程
-　　
-connect有几种连接方式，直接连接和队列连接、自动连接
-　　
-直接连接（Qt::DirectConnection）：信号槽在信号发出者所在的线程中执行
-　　
-队列连接 (Qt::QueuedConnection)：信号在信号发出者所在的线程中执行，槽函数在信号接收者所在的线程中执行
+#### 1.信号槽和多线程
+#### Qt::ConnectionType
+#### （1）Qt::AutoConnection
+默认连接方式，如果接收者和发送者在同一线程，那么就是Qt::DirectConnection。如果接受者和发送者不在同一个线程，那么就是Qt::QueuedConnection。当信号发送时决定为哪一个方式。
+举例：见综合举例
+#### （2）Qt::DirectConnection
+当信号发送后，立即调用槽函数，槽函数运行在发送者线程（依附发送者线程）。
+举例：见综合举例
+#### （3）Qt::QueuedConnection
+在控制回到接收者所在线程的事件循环时，槽函数被调用，运行在接收者线程（依附接受者线程）。
+举例：见综合举例
+#### （4）Qt::BlockingQueuedConnection
+槽函数的调用时机与Qt::QueuedConnection一致，不过发送完信号后发送者所在线程会阻塞，直到槽函数运行完。接收者和发送者不能在一个线程。在多线程间同步的场合使用。
+举例：见综合举例
+#### （5）Qt::UniqueConnection
+可以和上面的type用or连接。当使用该type时，如果连接了已存在的信号槽连接，
+那么会失败。
+举例：
+```
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+{
+    QPushButton *btn = new QPushButton(this);
+    connect(btn, SIGNAL(clicked(bool)), this, SLOT(onBtnClicked()), Qt::UniqueConnection);
+    // connect(btn, SIGNAL(clicked(bool)), this, SLOT(onBtnClicked()), Qt::UniqueConnection);
+}
 
-自动连接  (Qt::AutoConnection)：多线程时为队列连接函数，单线程时为直接连接函数。
+MainWindow::~MainWindow()
+{
+
+}
+
+void MainWindow::onBtnClicked()
+{
+    qDebug() << "============";
+}
+
+输出：
+（1）只有一个connect，不加Qt::UniqueConnection时，输出
+============
+============
+
+（2）两个connect，加了Qt::UniqueConnection，输出
+============
+```
+
+#### 综合举例1（和thread一起使用）：
+```
+// 主函数
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    qDebug() << QString("main thread id:") << QThread::currentThreadId();
+
+    MainWindow object;
+    QThread thread;
+    object.moveToThread(&thread);
+    
+    QObject::connect(&thread, SIGNAL(started()), &object, SLOT(onStart()));
+    thread.start();
+
+    return a.exec();
+}
+
+// 工作线程类
+void MainWindow::onStart()
+{
+    qDebug() << QString("obj thread id:") << QThread::currentThreadId();
+}
+
+```
+
+情况1：默认情况下，代码如上，结果为：
+```
+"main thread id:" 0x2b40
+"obj thread id:" 0x273c
+
+分析：
+连接方式为默认连接方式，此时thread和object都在次线程，所以用的是Qt::DirectConnection。
+object在次线程中运行，id和主线程不同
+```
+
+情况2：使用Qt::DirectConnection，此时不移动object到次线程
+```
+    MainWindow object;
+    QThread thread;
+//    object.moveToThread(&thread);
+
+    QObject::connect(&thread, SIGNAL(started()), &object, SLOT(onStart()), Qt::DirectConnection);
+    thread.start();
+```
+
+结果为：
+```
+"main thread id:" 0x2730
+"obj thread id:" 0x2050
+
+分析：
+连接方式为Qt::DirectConnectio，object依附于发送者线程，发送者thread在次线程，所以object也在次线程
+```
+
+情况3：使用Qt::QueuedConnection，此时不移动object到次线程
+```
+    MainWindow object;
+    QThread thread;
+//    object.moveToThread(&thread);
+
+    QObject::connect(&thread, SIGNAL(started()), &object, SLOT(onStart()), Qt::QueuedConnection);
+    thread.start();
+
+```
+
+结果为：
+```
+"main thread id:" 0x17dc
+"obj thread id:" 0x17dc
+
+分析：
+连接方式为Qt::QueuedConnection，object依附于接受者线程，也就是主线程，所以object在主线程执行
+```
+
+情况4：使用默认连接方式，此时不移动object到次线程
+```
+    MainWindow object;
+    QThread thread;
+//    object.moveToThread(&thread);
+
+    QObject::connect(&thread, SIGNAL(started()), &object, SLOT(onStart()));
+    thread.start();
+```
+
+结果为：
+```
+"main thread id:" 0x2118
+"obj thread id:" 0x2118
+
+分析：
+因为object和thread不在一个线程，所以连接方式为Qt::QueuedConnection，所以object依附于接受者线程，
+接受者就是object，object在主线程
+```
+
+#### 总结：
+（1）先看连接方式
+（2）如果是默认连接方式，判断发送者和接受者是否在同一个线程，如果在，那么同Qt::DirectConnection；如果不在，同Qt::QueuedConnection
+（3）如果是Qt::DirectConnection，那么槽函数执行的线程和发送者的线程一样（假如发送者在次线程，那么槽函数也在次线程，反正和发送者线程保持一致）
+（4）如果是Qt::QueuedConnection，那么槽函数执行的线程和接受者的线程一样（假如接受者在次线程，那么槽函数也在次线程，反正和接受者线程保持一致）
+
 
 //================================================================================================================
 
