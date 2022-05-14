@@ -30,7 +30,7 @@
 QObject是Qt实现元对象系统的基础，元对象系统是...
 
 #### 2.了解元对象系统吗？
-元对象系统是Qt对标准的C++进行的扩展，提供了（1）信号槽机制（2）动态属性系统（3）运行时类型识别 （4）对象树 等功能，
+元对象系统是Qt对标准的C++进行的扩展，提供了（1）信号槽机制（2）动态属性系统（3）运行时类型识别 （4）对象树（5）事件 等功能，
 为了使用原对象系统，需要（1）QObject类：作为使用元对象类的基类（2）Q_OBJECT宏：用于启动元对象系统（3）MOC（Meta-Object Compiler，元对象编译器）：为每个QObject子类提供必要的代码
 moc工作流程：读取源文件检测到类中包含有Q_OBJECT宏时，则会创建一个moc开头的C++源文件，其中包含了类的元对象代码。这些产生的源文件包含进类的源文件中，一起进行编译。
 
@@ -64,7 +64,6 @@ https://blog.csdn.net/lvdepeng123/article/details/79007988
 #### 1.信号槽原理
 信号槽实际就是观察者模式
 
-##### 1.1 信号与槽、和事件的区别
 ##### 1.2 自定义结构体到信号与槽要注意什么
 ##### 1.3 怎么自己实现 Qt 的信号与槽？
 ##### 1.4 信号与槽的底层原理；信号与槽怎么做到性能优化
@@ -707,70 +706,61 @@ object在次线程中运行，id和主线程不同
 
 //================================================================================================================
 
+#### 1.事件的传递、分发与处
 https://blog.csdn.net/luolaihua2018/article/details/110797592
 
-1.事件传递
-15.qt 的消息传递机制
-17.Qt的事件过滤器 （事件的传递是由子类往父类上传的）
-事件系统（自定义事件处理函数3种方式）
-https://www.cnblogs.com/xiaobingqianrui/p/9547924.html
-
-2.事件循环
+#### 2.事件循环
 Qt的主事件循环能够从事件队列中获取本地窗口系统事件，然后判断事件类型，并将事件分发给特定的接收对象。
 主事件循环通过调用QCoreApplication::exec()启动，随着QCoreApplication::exit()结束，本地的事件循环可用利用QEventLoop构建。
 
+#### 3.ignore()与accept()
+
+#### 4.事件过滤器
+
+#### 5.Qt 的事件处理的五个层次
+（1）重写paintEvent()、mousePressEvent()等事件处理函数。这是最普通、最简单的形式，同时功能也最简单。
+（2）重写event()函数。event()函数是所有对象的事件入口，QObject和QWidget中的实现，默认是把事件传递给特定的事件处理函数。
+（3）在特定对象上面安装事件过滤器。该过滤器仅过滤该对象接收到的事件。
+（4）在QCoreApplication::instance()上面安装事件过滤器。该过滤器将过滤所有对象的所有事件，因此和notify()函数一样强大，但是它更灵活，因为可以安装多个过滤器。全局的事件过滤器可以看到 disabled 组件上面发出的鼠标事件。全局过滤器有一个问题：只能用在主线程。
+（5）重写QCoreApplication::notify()函数。这是最强大的，和全局事件过滤器一样提供完全控制，并且不受线程的限制。但是全局范围内只能有一个被使用（因为QCoreApplication是单例的）。
+
+#### 6.信号槽、和事件的区别
+
+
 //================================================================================================================
 
-1.Qt下TCP通信过程
+#### 1.Qt下TCP通信过程
+https://zhuanlan.zhihu.com/p/393113128
+
 服务端：（QTcpServer）
-        ①创建QTcpServer对象
-
-        
-②监听list需要的参数是地址和端口号
-
-        
-③当有新的客户端连接成功回发送newConnect信号
-
-        
-④在newConnection信号槽函数中，调用nextPendingConnection函数获取新连接QTcpSocket对象
-
-        
-⑤连接QTcpSocket对象的readRead信号
-
-        ⑥在readRead信号的槽函数使用read接收数据
-
-        
-⑦调用write成员函数发送数据
+(1)创建QTcpServer对象
+(2)监听list需要的参数是地址和端口号
+(3)当有新的客户端连接成功回发送newConnect信号
+(4)在newConnection信号槽函数中，调用nextPendingConnection函数获取新连接QTcpSocket对象
+(5)连接QTcpSocket对象的readRead信号
+(6)在readRead信号的槽函数使用read接收数据
+(7)调用write成员函数发送数据
 
 客户端：（QTcpSocket）
-
-        ①创建QTcpSocket对象
-
-        ②当对象与Server连接成功时会发送connected 信号
-
-       
- ③调用成员函数connectToHost连接服务器，需要的参数是地址和端口号
-
-        
-④connected信号的槽函数开启发送数据
-
-        ⑤使用write发送数据，read接收数据
+(1)创建QTcpSocket对象
+(2)当对象与Server连接成功时会发送connected 信号
+(3)调用成员函数connectToHost连接服务器，需要的参数是地址和端口号
+(4)connected信号的槽函数开启发送数据
+(5)使用write发送数据，read接收数据
 
 //================================================================================================================
 
-1.Qt下UDP通信过程
+#### 1.Qt下UDP通信过程
+https://blog.csdn.net/m0_57266121/article/details/118942661
            
 UDP（User Datagram Protocol即用户数据报协议）是一个轻量级的，不可靠的，面向数据报的无连接协议。
 在网络质量令人十分不满意的环境下，UDP协议数据包丢失严重。
 由于UDP的特性：它不属于连接型协议，因而具有资源消耗小，处理速度快的优点，所以通常音频、
 视频和普通数据在传送时使用UDP较多，因为它们即使偶尔丢失一两个数据包，也不会对接收结果产生太大影响。
 所以QQ这种对保密要求并不太高的聊天程序就是使用的UDP协议。
-
-        
+  
 在Qt中提供了QUdpSocket 类来进行UDP数据报（datagrams）的发送和接收。Socket简单地说，就是一个IP地址加一个port端口  。
-
-        
-流程：①创建QUdpSocket套接字对象 ②如果需要接收数据，必须绑定端口 ③发送数据用writeDatagram，接收数据用 readDatagram 。
+流程：(1)创建QUdpSocket套接字对象 (2)如果需要接收数据，必须绑定端口 (3)发送数据用writeDatagram，接收数据用 readDatagram 。
 
 //================================================================================================================
 
@@ -783,8 +773,51 @@ Qt中提供了默认实现的MVD类，如QTableWidget、QListWidget、QTreeWidget等。
 
 //================================================================================================================
 
-1.Qt翻译流程
+#### 1.Qt翻译流程
 https://blog.csdn.net/weibuu/article/details/108802258
+
+#### 1.步骤：
+（1）pro文件中配置"TRANSLATIONS"，根据目标语言数量添加多个".ts"文件。
+```
+TRANSLATIONS += a_cn.ts
+TRANSLATIONS += a_en.ts
+```
+（2）执行lupdate，位置：工具-外部-Qt语言家-更新翻译。在有ts的情况下新增翻译，只需要再次执行lupdate。
+（3）打开linguist程序，翻译ts文件，翻译完成后执行lrelease，位置：linguist软件-文件-发布。生成qm文件。
+（4）复制qm文件到指定目录。（可跳过）
+```
+#把本目录下的qm文件复制到language文件
+QM_LIST = mywidget_zh_CN.qm
+DEST_LANGUAGE_PATH = $$system_path($$PWD/../../../../dist/qt5.6.3-win32-msvc2015/language)
+!exists($${DEST_LANGUAGE_PATH}) {
+    mkpath($${DEST_LANGUAGE_PATH})
+}
+for(qm, QM_LIST) {
+    system(copy $$system_path($${qm}) $${DEST_LANGUAGE_PATH})
+}
+```
+（5）加载对应的qm文件。（主函数里）
+```
+QDir qmDir(QApplication::applicationDirPath());
+qmDir.cdUp();
+qmDir.cd("language");
+foreach (QFileInfo file, qmDir.entryInfoList(QDir::Files)) {
+    if (file.suffix() == "qm") {
+        QTranslator *translator = new QTranslator;
+        if (translator->load(file.absoluteFilePath())) {
+            a.installTranslator(translator);
+        }
+    }
+}
+```
+（6）不关闭软件切换界面语言，需手动翻译控件。（可选）
+```
+void updateLanguage() 
+{
+	mLabel.setText(tr("name"));
+	mBtn.setText(tr("name"));
+}
+```
 
 //================================================================================================================
 
