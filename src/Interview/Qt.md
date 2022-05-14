@@ -1,7 +1,6 @@
 ## 目录
 ### 元对象系统
 #### QObject
-#### qmake
 ### 信号槽
 #### 信号槽原理
 #### 信号槽优缺点
@@ -53,11 +52,17 @@ Qt中使用对象树（object tree）来管理所有的QObject类及其子类的对象。当创建一个QObj
 ##### 2.5 Qt运行时类型识别 和 C++运行时类型信息
 https://blog.csdn.net/songsong2017/article/details/103604885
 
+##### C++中的RTTI
+(1)typeid运算符，用于返回表达式的类型。
+(2)dynamic_cast运算符，用于将基类的指针或引用安全地转换成派生类的指针或引用。
+
+##### Qt运行时类型识别
+
+##### Qt为什么不使用C++的RTTI？
+https://zhuanlan.zhihu.com/p/61303678?utm_source=wechat_timeline
+
 ##### 2.6 qobject_cast 和 C++的cast
 使用qobject_cast()函数来对QObject类进行动态类型转换，这个函数的功能类似于标准C++中的dynamic_cast()函数，但它不再需要RTTI的支持。
-
-#### 3.qmake,make,makefile
-https://blog.csdn.net/lvdepeng123/article/details/79007988
 
 //================================================================================================================
 
