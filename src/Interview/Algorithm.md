@@ -1,5 +1,5 @@
 ## 目录
-### 排序：时间复杂度，空间复杂度
+### 排序
 #### 冒泡排序
 #### 选择排序
 #### 插入排序
@@ -10,24 +10,29 @@
 #### 计数排序
 #### 桶排序
 #### 基数排序
+
 ### 查找
 #### 二分查找
-#### 散列表查找
+#### 散列表（哈希表）查找
 #### 树结构查找
+
 ### 搜索
 #### 深度优先搜索
 #### 广度优先搜索
+
 ### 字符串匹配
 #### 暴力匹配
 #### BM
 #### KMP
 #### Trie
+
 ### 算法思想
 #### 动态规划
 #### 贪心算法
 #### 回溯算法
 #### 分治算法
 #### 枚举算法
+
 ### 其他
 #### 找出数组中次数最多的前 k 个数 
 #### 计算十六进制数中1的个数（16进制数-4字节-32位）
@@ -117,8 +122,59 @@ void insertionSort() {
 }
 ```
 
-##### 4.快速排序
+#### 4.希尔排序
 ```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
+void  shellSort(int[] arrays) {
+        //增量每次都/2
+        for (int step = arrays.length / 2; step > 0; step /= 2) {
+
+            //从增量那组开始进行插入排序，直至完毕
+            for (int i = step; i < arrays.length; i++) {
+
+                int j = i;
+                int temp = arrays[j];
+
+                // j - step 就是代表与它同组隔壁的元素
+                while (j - step >= 0 && arrays[j - step] > temp) {
+                    arrays[j] = arrays[j - step];
+                    j = j - step;
+                }
+                arrays[j] = temp;
+            }
+        }
+}
+```
+
+#### 5.归并排序
+```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
+
+
+
+```
+
+#### 6.快速排序
+```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
 void quickSort(int array[], int low, int high)
 {
     int i = low;
@@ -167,29 +223,6 @@ void sort()
         qDebug() << array[i];
     }
 }
-
-结果：
-10
-9
-8
-7
-6
-1
-2
-3
-4
-5
------- 10
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
 ```
 
 ```
@@ -223,9 +256,66 @@ void quickSort(int arr[], int low, int high)
     }
 }
 ```
+
+#### 7.堆排序
+```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
+
+
+
+```
+
+#### 8.计数排序
+```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
+
+
+
+```
+
+#### 9.桶排序
+```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
+
+
+
+```
+
+#### 10.基数排序
+```
+/**
+* \brief
+* 描述：
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
+*/
+
+
+```
+
+
 //============================================查找==================================================
 
-#### 2.二分查找
+#### 1.二分查找
 ```
 int binarySearch(int arr[], int key)
 {
@@ -245,30 +335,57 @@ int binarySearch(int arr[], int key)
     return -1;
 }
 ```
+#### 2.散列表（哈希表）查找
+https://zhuanlan.zhihu.com/p/141539102
+
+
+#### 3.树结构查找
+https://blog.csdn.net/weixin_45002147/article/details/102537222
 
 
 //============================================搜索==================================================
 
+#### 1.深度优先搜索（DFS）
+
+
+#### 2.广度优先搜索
+https://blog.csdn.net/North_City_/article/details/118554484
+
 
 //============================================字符串匹配==================================================
 
+#### 暴力匹配
+#### BM
+#### KMP
+#### Trie
+
+https://blog.csdn.net/weixin_43528729/article/details/104989060
 
 //============================================算法思想==================================================
 
 #### 动态规划
+https://blog.csdn.net/Yangchenju/article/details/107870073
+
 #### 贪心算法
+https://www.cnblogs.com/hust-chen/p/8646009.html
+
 #### 回溯算法
+https://blog.csdn.net/zy450271923/article/details/105745637
+
 #### 分治算法
+https://blog.csdn.net/c15158032319/article/details/117828162
+
 #### 枚举算法
+https://blog.csdn.net/qq_52870580/article/details/122440176
 
 
 //============================================其他==================================================
 
 
-#### 3.找出数组中次数最多的前 k 个数 
+#### 找出数组中次数最多的前 k 个数 
 https://blog.csdn.net/fuyufjh/article/details/48037127
 
-#### 4.计算十六进制数中1的个数（16进制数-4字节-32位）
+#### 计算十六进制数中1的个数（16进制数-4字节-32位）
 ```
 int NumberOf1(int n) 
 {
@@ -284,7 +401,7 @@ int NumberOf1(int n)
 }
 ```
 
-#### 5.长二进制反转（16进制数-4字节-32位）
+#### 长二进制反转（16进制数-4字节-32位）
 ```
 unsigned int reverse(int num)
 {
@@ -298,21 +415,21 @@ unsigned int reverse(int num)
 }
 ```
 
-#### 6.找出数组中数量超过一半的元素
+#### 找出数组中数量超过一半的元素
 https://blog.csdn.net/qiana_/article/details/79176936
 
-#### 7.找出数组中最小的K个数
+#### 找出数组中最小的K个数
 https://blog.csdn.net/ThinPikachu/article/details/105870777
 https://blog.csdn.net/gao__xue/article/details/80018869
 
-#### 8.长整数相加
+#### 长整数相加
 https://blog.csdn.net/weixin_42205987/article/details/82011724
 
-#### 9.十进制字符串转十六进制字符串
+#### 十进制字符串转十六进制字符串
 
 
 
-### 5.实现strcpy函数
+### 实现strcpy函数
 https://blog.csdn.net/hhhuang1991/article/details/79955057
 ```
 char *strcpy(char *str1, const char *str2)
@@ -331,7 +448,7 @@ char *strcpy(char *str1, const char *str2)
 }
 ```
 
-### 6.实现strcmp函数
+### 实现strcmp函数
 https://blog.csdn.net/wgenek/article/details/7257435
 https://www.cnblogs.com/litifeng/p/7465173.html
 ```
@@ -352,7 +469,7 @@ int strcmp(const char *str1, const char *str2)
 }
 ```
 
-### 7.实现memcpy函数
+### 实现memcpy函数
 https://www.cnblogs.com/chuanfengzhang/p/8447251.html
 https://blog.csdn.net/goodwillyang/article/details/45559925
 https://www.cnblogs.com/liangyc/p/11628723.html
