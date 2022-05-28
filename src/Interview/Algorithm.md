@@ -5,11 +5,11 @@
 #### 插入排序
 #### 希尔排序
 #### 归并排序
-#### 堆排序
 #### 快速排序
+#### 堆排序
 #### 计数排序
-#### 基数排序
 #### 桶排序
+#### 基数排序
 ### 查找
 #### 二分查找
 #### 散列表查找
@@ -42,60 +42,69 @@
 
 #### https://zhuanlan.zhihu.com/p/137041568
 
-//============================================排序：时间复杂度，空间复杂度==================================================
+//============================================排序==================================================
 
-#### 1.排序算法：冒泡，插入，选择，快排。
-##### 1.冒泡排序
+#### 1.冒泡排序
 ```
 /**
-* \brief
-* 比较相邻两个变量的值，如果一个大于另一个，就交换，每次确定一个最大值
-* 因为是两两交换，所以内部用一个循环交换;
-* 外部因为最后一次不用比较，所以-1
-* 内部因为两两比较，也要-1；同时每次都会确定一个最大值，所以会-i
+* 描述：两两比较，大的往后放。需要确定length-1个数的位置，所以外部循环为length-1。内部需要两两交换，第一次是length-1，第二次是length-1-1，以此类推。
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
 */
-void bubbleSort()
+void bubbleSort(int arr[], int length)
 {
-    QList<double> lst = {10, 9, 8, 7, 6, 1, 2, 3, 4, 5};
-    for (int i = 0; i <  lst.length() - 1; i++) {
-        for (int j = 0; j < lst.length() - 1 - i; j++) {
-            if (lst[j] > lst[j + 1]) {
-                double tmp = lst[j];
-                lst[j] = lst[j + 1];
-                lst[j + 1] = tmp;
-            }
-        }
-    }
-    qDebug() << lst;
-}
-```
-
-```
-// 冒泡排序
-void bubbleSort(int arr[])
-{
-    int length = arr.length;
-    for (int i = 0; i < length - 1; i++) {
-        for (int j = 0; j < length - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                int tmp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = arr[j];
-            }
-        }
+   for (int i = 0; i < length - 1; i++) {
+	for (int j = 0; j < length - 1 - i; j++) {
+	    if (arr[j] > arr[j+1]) {
+		int tmp = arr[j];
+		arr[j] = arr[j+1];
+		arr[j+1] = tmp;
+	    }
+	}
     }
 }
 ```
 
-##### 2.插入排序
+#### 2.选择排序
+```
+/**
+* 描述：选择一个最小的，和第一位交换位置，继续选择最小的，和第二位交换位置。需要选length-1次最小值，所以外部循环次数为length-1,内部从第一位+1开始
+寻找最小值，所以循环从i+1开始，直到数组末尾。每次假设当前i为最小值。
+* 是否稳定：否
+* 实际复杂度：
+* 空间复杂度：
+*/
+void selectionSort(int arr[], int length) {
+    for (int i = 0; i < lenght; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < length; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i) {
+            int tmp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = tmp;
+        }
+    }
+}
 ```
 
+#### 3.插入排序
+```
 /**
 * \brief
 * 每次往前面的有序队列里插入数据，需要找到合适的位置
 * 需要一个空队列，用于保存排好序的数据（可以对原数组进行后移来达到只使用一个数组,需要用while）
 * 每次需要找到插入位置index
 */
+void insertionSort() {
+}
+```
+
 void insertionSort()
 {
     // 需要额外数组
@@ -141,72 +150,6 @@ void insertionSort(int arr[])
             index--;
         }
         arr[index] = curData;
-    }
-}
-```
-
-##### 3.选择排序
-```
-/**
-* \brief
-* 每次选择一个最大的或者最小的，放到队列最前面
-*
-*/
-void selectionSort()
-{
-    // 同时有index和number
-//    QList<double> lst = {10, 9, 8, 7, 6, 1, 2, 3, 4, 5};
-//    for (int i = 0; i < lst.length() - 1; i++) {
-//        double minNumber = lst[i];
-//        int minNumberIndex = i;
-//        for (int j = i + 1; j < lst.length(); j++) {
-//            if (lst.at(j) < minNumber) {
-//                minNumber = lst.at(j);
-//                minNumberIndex = j;
-//            }
-//        }
-//        // 和数组第一位交换
-//        double tmp = lst[i];
-//        lst[i] = minNumber;
-//        lst[minNumberIndex] = tmp;
-//    }
-//    qDebug() << lst;
-
-    // 只有index
-    QList<double> lst = {10, 9, 8, 7, 6, 1, 2, 3, 4, 5};
-    for (int i = 0; i < lst.length() - 1; i++) {
-        int minNumberIndex = i;
-        for (int j = i + 1; j < lst.length(); j++) {
-            if (lst.at(j) < lst[minNumberIndex]) {
-                minNumberIndex = j;
-            }
-        }
-        // 和数组第一位交换
-        double tmp = lst[i];
-        lst[i] = lst[minNumberIndex];
-        lst[minNumberIndex] = tmp;
-    }
-    qDebug() << lst;
-}
-```
-
-```
-// 选择排序
-void selctionSort(int arr[]) 
-{
-    int length = arr.length;
-    for (int i = 0; i < length; i++) {
-        int min = arr[i];
-        int index = i;
-        for (int j = i + 1; j < length; j++) {
-            if (arr[j] < min) {
-                index = j;
-                min = arr[j];
-            }
-        }
-        int tmp = arr[i];
-        arr[i] = arr[index];
-        arr[index] = arr[i];
     }
 }
 ```
