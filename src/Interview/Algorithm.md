@@ -97,59 +97,22 @@ void selectionSort(int arr[], int length) {
 ```
 /**
 * \brief
-* 每次往前面的有序队列里插入数据，需要找到合适的位置
-* 需要一个空队列，用于保存排好序的数据（可以对原数组进行后移来达到只使用一个数组,需要用while）
-* 每次需要找到插入位置index
+* 描述：每次选一个数，往前面的有序队列里插，因为第一个数已经是有序的，所以需要插入length-1个数，所以外部循环是length-1,移动位置采用while循环，基本思想就是
+判断有序队列的最后一个是否与当前数据的大小，如果当前数据更大，就往后移一位，关于j，最小也要是0，毕竟j表示数组的下标。最后放置当前数的时候，j需要加1
+* 是否稳定：是
+* 实际复杂度：
+* 空间复杂度：
 */
 void insertionSort() {
-}
-```
-
-void insertionSort()
-{
-    // 需要额外数组
-//    QList<double> lst = {10, 9, 8, 7, 6, 1, 2, 3, 4, 5};
-//    QList<double> res;
-//    for (int i = 0; i < lst.length(); i++) {
-//        double curNumber = lst.at(i);
-//        int index = 0;
-//        for (int j = 0; j < res.length(); j++) {
-//            if (curNumber > res.at(j)) {
-//                index += 1;
-//            }
-//        }
-//        res.insert(index, curNumber);
-//    }
-//    qDebug() << res;
-
-    // 不需要额外数组
-    QList<double> lst = {10, 9, 8, 7, 6, 1, 2, 3, 4, 5};
-    for (int i = 0; i < lst.length(); i++) {
-        double curNumber = lst.at(i);
-        int index = i;
-        while(i > 0 && curNumber < lst.at(i - 1)) {
-            lst[i] = lst[i - 1];
-            index = i - 1;
+    for (int i = 0; i < length - 1; i++) {
+        int curValue = arr[i+1];
+        int j = i;
+        while (arr[j] > arr[j+1] && j >= 0) {
+            arr[j+1] = arr[j];
+            j--;
         }
-        lst[index] = curNumber;
-    }
-    qDebug() << lst;
-}
-```
 
-```
-// 插入排序
-void insertionSort(int arr[])
-{
-    int length = arr.length;
-    for (int i = 1; i < length; i++) {
-        int index = i;
-        int curData = arr[index];
-        while (index > 0 && arr[index] < arr[index - 1]) {
-            arr[index] = arr[index - 1];
-            index--;
-        }
-        arr[index] = curData;
+        arr[j+1] = curValue;
     }
 }
 ```
