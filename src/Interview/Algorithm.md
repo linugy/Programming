@@ -147,6 +147,7 @@ void  shellSort(int arr[], int length) {
 ```
 
 #### 5.归并排序
+https://zhuanlan.zhihu.com/p/124356219
 ```
 /**
 * \brief
@@ -209,12 +210,14 @@ void MainWindow::mergeSort(int arr[], int arr2[], int start, int end)
 ```
 
 #### 6.快速排序
-https://zhuanlan.zhihu.com/p/124356219
+https://blog.csdn.net/qq_40941722/article/details/94396010
 ```
 /**
 * \brief
-* 描述：
-* 是否稳定：是
+* 描述：找一个待排序m，比如数组第一个数，目的是找到m的正确位置，也就当m左边的数小于m，m右边的数大于m，那么m的位置就确定了，就不会再动了。
+设置一个i和j，i在最左边，j在最右边，j开始移动，如果遇到小于m的数，那么j停下，然后i开始移动，如果遇到大于m的数，那么i停下，此时交换i和j的数，
+还没完，接着移动i和j，直到i和j碰面或者走到中间了，那么就交换m和i或j的值，此时m就放到正确位置了。
+* 是否稳定：不是
 * 实际复杂度：
 * 空间复杂度：
 */
@@ -250,52 +253,6 @@ void quickSort(int array[], int low, int high)
         array[i] = key;
         quickSort(array, low, i - 1);
         quickSort(array, i + 1, high);
-    }
-}
-
-void sort()
-{
-    int array[10] = {10, 9, 8, 7, 6, 1, 2, 3, 4, 5};
-    int length = sizeof(array) / sizeof(int);
-    for (int i = 0; i < length; i++) {
-        qDebug() << array[i];
-    }
-    qDebug() << "------" << length;
-    quickSort(array, 0, length - 1);
-    for (int i = 0; i < length; i++) {
-        qDebug() << array[i];
-    }
-}
-```
-
-```
-// 快排
-void quickSort(int arr[], int low, int high)
-{   
-    int i = low;
-    int j = high;
-    int key = arr[i];
-    
-    while (i < j) {
-        while (i < j && arr[j] > key) {
-            j--;
-        }
-        if (i < j) {
-            arr[i] = arr[j];
-        }
-
-        while (i < j && arr[i] < key) {
-            i++;
-        }
-        if (i < j) {
-            arr[j] = arr[i];
-        }
-    }
-
-    if (low < high) {
-        arr[i] = key;
-        quickSort(arr, low, i - 1);
-        quickSort(arr, i + 1, high);
     }
 }
 ```
