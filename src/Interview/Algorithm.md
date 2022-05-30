@@ -126,29 +126,23 @@ void insertionSort() {
 ```
 /**
 * \brief
-* 描述：
-* 是否稳定：是
+* 描述：首先增加一个步进值，开始长度为length/2,后面依次/2，直到为1为止。外层循环从step开始，也就是说从数组中间开始，直到length为止，接着判断j-step和j，如果j-step更大，就后移。
+* 是否稳定：不是
 * 实际复杂度：
 * 空间复杂度：
 */
 void  shellSort(int[] arrays) {
-        //增量每次都/2
-        for (int step = arrays.length / 2; step > 0; step /= 2) {
-
-            //从增量那组开始进行插入排序，直至完毕
-            for (int i = step; i < arrays.length; i++) {
-
-                int j = i;
-                int temp = arrays[j];
-
-                // j - step 就是代表与它同组隔壁的元素
-                while (j - step >= 0 && arrays[j - step] > temp) {
-                    arrays[j] = arrays[j - step];
-                    j = j - step;
-                }
-                arrays[j] = temp;
+    for (int step = length / 2; step > 0; step /= 2) {
+        for (int i = step; i < length; i++) {
+            int j = i;
+            int curValue = arr[j];
+            while (arr[j-step] > curValue && (j-step >= 0)) {
+                arr[j] = arr[j-step];
+                j = j - step;
             }
+            arr[j] = curValue;
         }
+    }
 }
 ```
 
