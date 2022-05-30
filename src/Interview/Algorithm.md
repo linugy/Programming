@@ -108,7 +108,7 @@ void selectionSort(int arr[], int length) {
 * 实际复杂度：
 * 空间复杂度：
 */
-void insertionSort() {
+void insertionSort(int arr[], int length) {
     for (int i = 0; i < length - 1; i++) {
         int curValue = arr[i+1];
         int j = i;
@@ -131,7 +131,7 @@ void insertionSort() {
 * 实际复杂度：
 * 空间复杂度：
 */
-void  shellSort(int[] arrays) {
+void  shellSort(int arr[], int length) {
     for (int step = length / 2; step > 0; step /= 2) {
         for (int i = step; i < length; i++) {
             int j = i;
@@ -155,12 +155,61 @@ void  shellSort(int[] arrays) {
 * 实际复杂度：
 * 空间复杂度：
 */
+// 递归版
+void MainWindow::sort(int arr[], int length)
+{
+    int arr2[length];
+    mergeSort(arr, arr2, 0, length - 1);
+}
 
+void MainWindow::mergeSort(int arr[], int arr2[], int start, int end)
+{
+    if (start >= end) {
+        return;
+    }
 
+    int mid = (start + end) / 2;
+
+    mergeSort(arr, arr2, start, mid);
+    mergeSort(arr, arr2, mid+1, end);
+
+    int k = start;
+    int i = start;
+    int j = mid+1;
+
+    while (i <= mid && j <= end) {
+        if (arr[i] < arr[j]) {
+            arr2[k] = arr[i];
+            k++;
+            i++;
+        } else {
+            arr2[k] = arr[j];
+            k++;
+            j++;
+        }
+    }
+
+    while (i <= mid) {
+        arr2[k] = arr[i];
+        k++;
+        i++;
+    }
+
+    while (j <= end) {
+        arr2[k] = arr[j];
+        k++;
+        j++;
+    }
+
+    for (int m = start; m <= end; m++) {
+        arr[m] = arr2[m];
+    }
+}
 
 ```
 
 #### 6.快速排序
+https://zhuanlan.zhihu.com/p/124356219
 ```
 /**
 * \brief
