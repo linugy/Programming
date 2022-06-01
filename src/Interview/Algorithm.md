@@ -223,37 +223,38 @@ https://blog.csdn.net/qq_40941722/article/details/94396010
 */
 void quickSort(int array[], int low, int high)
 {
-    int i = low;
-    int j = high;
-    int key = array[i];
+    if (start >= end) {
+        return;
+    }
 
-    while (i < j) {
-        while (i < j && array[j] >= key) {
-            // 这里的 i < j，是为了防止j跑到i的位置了，还继续往前走
-            // （如果是原始数组是从小到大，就可能出现这种情况）
+    int i = start;
+    int j = end;
+    int curValue = arr[i];
+
+    while (i < j)  {
+        // 移动j
+        while (i < j && arr[j] >= curValue) {
             j--;
         }
-        if (i < j) {
-            array[i] = array[j];
-        }
-
-        while (i < j &&  array[i] <= key) {
-            // 此处i < j，和上面一样，防止i跑到j的位置了，还继续往后走
-            // （如果是原始数组是从小到大，就可能出现这种情况）
+        // 移动i
+        while (i < j && arr[i] <= curValue) {
             i++;
         }
+
+        // 交换i和j的值
         if (i < j) {
-            array[j] = array[i];
+            int tmp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = tmp;
         }
     }
-    // 跳槽循环时，表示i等于j，也就是一次排序完成，需要将key放到i的位置
 
-    // 这里保证每次递归时需要low小于high，如果大于或等于了，表示不需要递归了
-    if (low < high) {
-        array[i] = key;
-        quickSort(array, low, i - 1);
-        quickSort(array, i + 1, high);
-    }
+    // i和j相等后，交换i和start的值
+    arr[start] = arr[i];
+    arr[i] = curValue;
+
+    quickSort(arr, start+1,i-1);
+    quickSort(arr, i+1, end);
 }
 ```
 
