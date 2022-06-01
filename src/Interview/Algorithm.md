@@ -330,8 +330,8 @@ void MainWindow::countSort(int arr[], int length)
 ```
 /**
 * \brief
-* 描述：
-* 是否稳定：是
+* 描述：是计数排序的升级版，一个桶放一个范围的数据
+* 是否稳定：
 * 实际复杂度：
 * 空间复杂度：
 */
@@ -344,8 +344,8 @@ void MainWindow::countSort(int arr[], int length)
 ```
 /**
 * \brief
-* 描述：
-* 是否稳定：是
+* 描述：是桶排序的升级版，先比较个位，然后十位，百位，直到最高位
+* 是否稳定：
 * 实际复杂度：
 * 空间复杂度：
 */
