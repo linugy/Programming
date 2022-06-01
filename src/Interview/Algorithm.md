@@ -263,7 +263,7 @@ void quickSort(int array[], int low, int high)
 /**
 * \brief
 * 描述：
-* 是否稳定：是
+* 是否稳定：
 * 实际复杂度：
 * 空间复杂度：
 */
@@ -276,13 +276,53 @@ void quickSort(int array[], int low, int high)
 ```
 /**
 * \brief
-* 描述：
+* 描述：不是基于比较的排序算法，首先找到最大值和最小值的差值，开辟空间，遇到一个数对应的数组元素就+1，然后输出元素值
 * 是否稳定：是
 * 实际复杂度：
 * 空间复杂度：
 */
+void MainWindow::countSort(int arr[], int length)
+{
+    if (length == 0) {
+        return;
+    }
 
+    int max = arr[0];
+    int min = arr[0];
 
+    for (int i = 0; i < length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    for (int i = 0; i < length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    int *newArr = new int[max - min + 1];
+
+    for (int i = 0; i < max - min + 1; i++) {
+        newArr[i] = 0;
+    }
+
+    for (int i = 0; i < length; i++) {
+        newArr[arr[i] - min]++;
+    }
+
+    int k = 0;
+    for (int i = 0; i < max - min + 1; i++) {
+        int tmpLength = newArr[i];
+        int tmpValue = i + min;
+        for (int j = 0; j < tmpLength; j++) {
+            arr[k++] = tmpValue;
+        }
+    }
+
+    delete [] newArr;
+}
 
 ```
 
