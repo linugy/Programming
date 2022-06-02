@@ -50,6 +50,7 @@
 #### 实现strcpy函数
 #### 实现strcmp函数
 #### 实现memcpy函数
+#### Manacher算法（回文算法）
 
 #### https://zhuanlan.zhihu.com/p/137041568
 
@@ -439,10 +440,32 @@ int MainWindow::BFSearch(char str[], int strLength, char pattern[], int patternL
 ```
 
 #### 哈希检索(RK)
-```
+在BF算法上进行优化，使用字符串hash值进行匹配
+
+#### KMP 
+https://blog.csdn.net/ls291187101/article/details/51891974
+https://blog.csdn.net/heiioworld1/article/details/107103252
+
+##### 部分匹配表：子字符串前缀和后缀的共有的元素最大长度
+以”ABCDABD”为例：
+
+“AB”的前缀为[A]，后缀为[B]，共有元素的长度为0；
+
+“ABC”的前缀为[A, AB]，后缀为[BC, C]，共有元素的长度0；
+
+“ABCD”的前缀为[A, AB, ABC]，后缀为[BCD, CD, D]，共有元素的长度为0；
+
+“ABCDA”的前缀为[A, AB, ABC, ABCD]，后缀为[BCDA, CDA, DA, A]，共有元素为”A”，长度为1；
+
+“ABCDAB”的前缀为[A, AB, ABC, ABCD, ABCDA]，后缀为[BCDAB, CDAB, DAB, AB, B]，共有元素为”AB”，长度为2；
+
+“ABCDABD”的前缀为[A, AB, ABC, ABCD, ABCDA, ABCDAB]，后缀为[BCDABD, CDABD, DABD, ABD, BD, D]，共有元素的长度为0。
+
 ```
 
-#### KMP
+```
+
+##### 算法步骤
 ```
 ```
 
@@ -593,3 +616,6 @@ void *memcpy(void *dest, const void *src, int n)
     return dest;
 }
 ```
+
+#### Manacher算法（回文算法）
+https://blog.csdn.net/qq_30266615/article/details/98527060
