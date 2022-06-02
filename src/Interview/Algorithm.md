@@ -418,6 +418,24 @@ https://blog.csdn.net/ls291187101/article/details/51891974
 
 #### ±©¡¶∆•≈‰(BF)
 ```
+int MainWindow::BFSearch(char str[], int strLength, char pattern[], int patternLength)
+{
+    int i = 0;
+    int j = 0;
+    while (i < strLength&& j < patternLength) {
+        if (str[i] == pattern[j])  {
+            i++;
+            j++;
+        } else {
+            i = i - j + 1;
+            j = 0;
+        }
+    }
+    if (j == patternLength) {
+        return i - j;
+    }
+    return -1;
+}
 ```
 
 #### π˛œ£ºÏÀ˜(RK)
