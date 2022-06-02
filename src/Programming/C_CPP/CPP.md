@@ -1,4 +1,4 @@
-### 1.const
+﻿### 1.const
 #### 修饰变量
 表示变量不可以被修改，如：const int a = 0；
 #### 修饰指针
@@ -143,7 +143,8 @@ int length = sizeof(arr) / sizeof(int));//数组的内存大小除以类型的�
 ```
 
 ### 14.extern "C"
-按照C语言的方式编译和链接
+https://zhuanlan.zhihu.com/p/123269132
+是C++特有的指令，作用是告诉C++编译器按照C语言的方式编译和链接
 举例：
 ```
 #ifdef __cplusplus
