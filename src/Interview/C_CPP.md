@@ -203,6 +203,8 @@
 #### 多态
 
 #### 虚函数指针、虚函数表、虚表指针
+参考：https://zhuanlan.zhihu.com/p/75172640
+https://blog.twofei.com/496/
 
 #### 重写、重载、覆盖
 
